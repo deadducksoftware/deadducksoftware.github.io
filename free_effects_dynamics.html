@@ -1,0 +1,221 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Dynamics &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Channel Strips" href="free_effects_strips.html" />
+    <link rel="prev" title="Equalisers" href="free_effects_equalisers.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_strips.html" title="Channel Strips"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="free_effects_equalisers.html" title="Equalisers"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" accesskey="U">Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Dynamics</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="dynamics">
+<h1>Dynamics<a class="headerlink" href="#dynamics" title="Permalink to this headline">¶</a></h1>
+<section id="compressor">
+<h2>Compressor<a class="headerlink" href="#compressor" title="Permalink to this headline">¶</a></h2>
+<p>A peak compressor with optional external side-chain input.</p>
+<img alt="_images/FreeEffects_Compressor.png" class="align-center" src="_images/FreeEffects_Compressor.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Input</strong> - adjust the input level from -20 dB to +20 dB.</p>
+<p><strong>Threshold</strong> - set the compression threshold from -40 dB to 0.</p>
+<p><strong>Ratio</strong> - set the compression ratio from 1:1 to 10:1.</p>
+<p><strong>Attack</strong> - set the attack time from 0.1 ms to 200 ms.</p>
+<p><strong>Release</strong> - set the release time from 50 ms to 1 sec.</p>
+<p><strong>Makeup</strong> - set the gain applied to the signal post-compression from 0 dB to 20 dB.</p>
+<p><strong>Mix</strong> - set the dry/wet balance of the output from all dry (0) to all wet (100%).</p>
+</div></blockquote>
+<p>The following controls apply to the sidechain (detector) signal:</p>
+<blockquote>
+<div><p><strong>Listen</strong> - replace the output signal with the sidechain signal for monitoring.</p>
+<p><strong>External</strong> - set the sidechain input to receive the signal through audio inputs 3/4.</p>
+<p><strong>Trim</strong> - adjust the input level of the sidechain signal from -20 dB to +20 dB.</p>
+<p><strong>Low Cut</strong> - set the cutoff of the highpass filter applied to the sidechain input from 10 Hz to 2 kHz.</p>
+</div></blockquote>
+<p>The plugin meter shows input levels on the left, output levels on the right and the gain reduction level in the centre:</p>
+<img alt="_images/FreeEffects_CompMetering.png" class="align-center" src="_images/FreeEffects_CompMetering.png" />
+<p>The signal flow is as follows:</p>
+<img alt="_images/FreeEffects_CompSignalFlow.png" class="align-center" src="_images/FreeEffects_CompSignalFlow.png" />
+<p>The side chain signal in the lower half of the diagram is derived from either the main stereo input (1/2) or an external stereo input (3/4) as determined by the External switch. It can then be adjusted using the Trim and Low Cut controls before being used to determine the gain reduction applied to the main signal flow, shown in the upper part of the diagram.</p>
+<p>The Listen switch can be used to temporarily divert the sidechain signal to the audio output to allow the signal to be monitored, both aurally and via the input level meter.</p>
+<p>The Mix control combines the uncompressed signal (after the input trim control) with the compressed signal (after the makeup gain control) to provide for parallel compression techniques, or to simply compare the compressed output signal with the original uncompressed input.</p>
+</section>
+<section id="limiter">
+<h2>Limiter<a class="headerlink" href="#limiter" title="Permalink to this headline">¶</a></h2>
+<p>A ‘soft’ limiter with optional hard-clipper.</p>
+<img alt="_images/FreeEffects_Limiter.png" class="align-center" src="_images/FreeEffects_Limiter.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Input</strong> - adjust the input level from -20 dB to +20 dB.</p>
+<p><strong>Threshold</strong> - set the limiting threshold from -40 dB to 0 dB.</p>
+<p><strong>Clip</strong> - set the clipping threshold from -40 dB to +3 dB.</p>
+<p><strong>Release</strong> - set the release time from 50 ms to 1 sec.</p>
+</div></blockquote>
+<p>Limiter is a ‘soft’ limiter in that it does not provide ‘brick-wall’ limiting. The input signal can exceed the limiting threshold but usually no more than about 0.3 dB. Use the Clip control to set a hard limit at the required threshold if necessary. Set the Clip control below the limiter threshold for some hard-clipping distortion or set it to +3 dB to deactivate it completely.</p>
+<p>The Limiter meter includes displays for stereo input, gain reduction and stereo output:</p>
+<img alt="_images/FreeEffects_LimiterMetering.png" class="align-center" src="_images/FreeEffects_LimiterMetering.png" />
+<p>Limiter uses a look-ahead buffer to manage the incoming signal which introduces a fixed latency of 1.5 ms into the plugin’s signal flow.</p>
+</section>
+<section id="gate">
+<h2>Gate<a class="headerlink" href="#gate" title="Permalink to this headline">¶</a></h2>
+<p>A noise-gate with optional external side-chain input.</p>
+<img alt="_images/FreeEffects_Gate.png" class="align-center" src="_images/FreeEffects_Gate.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Input</strong> - adjust the input level from -20 dB to +20 dB.</p>
+<p><strong>Low</strong> - set the threshold lower limit to -40 dB (off) or -80 dB (on).</p>
+<p><strong>Threshold</strong> - set the threshold from -40 dB to 0 dB or -80 dB to 0 dB according to the Low setting.</p>
+<p><strong>Attack</strong> - set the attack time from 0.1 ms to 200 ms.</p>
+<p><strong>Hold</strong> - set the hold time from 0 to 1 sec.</p>
+<p><strong>Release</strong> - set the release time from 50 ms to 1 sec.</p>
+</div></blockquote>
+<p>The following controls apply to the sidechain (detector) signal:</p>
+<blockquote>
+<div><p><strong>Listen</strong> - replace the output signal with the sidechain signal for monitoring.</p>
+<p><strong>External</strong> - set the sidechain input to receive the signal through audio inputs 3/4.</p>
+<p><strong>Trim</strong> - adjust the input level of the sidechain signal from -20 dB to +20 dB.</p>
+<p><strong>Low Cut</strong> - set the cutoff of the highpass filter applied to the sidechain input from 10 Hz to 2 kHz.</p>
+</div></blockquote>
+<p>The signal flow is as follows:</p>
+<img alt="_images/FreeEffects_GateSignalFlow.png" class="align-center" src="_images/FreeEffects_GateSignalFlow.png" />
+<p>The side chain signal in the lower half of the diagram is derived from either the main stereo input (1/2) or an external stereo input (3/4) as determined by the External switch. It can then be adjusted using the Trim and Low Cut controls before being used to control the output signal.</p>
+<p>The Listen switch can be used to temporarily divert the sidechain signal to the audio output to allow the signal to be monitored, both aurally and via the input level meter.</p>
+</section>
+<section id="expander">
+<h2>Expander<a class="headerlink" href="#expander" title="Permalink to this headline">¶</a></h2>
+<p>A downward expander with optional external side-chain input.</p>
+<img alt="_images/FreeEffects_Expander.png" class="align-center" src="_images/FreeEffects_Expander.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Input</strong> - adjust the input level from -20 dB to +20 dB.</p>
+<p><strong>Low</strong> - set the threshold lower limit to -40 dB (off) or -80 dB (on).</p>
+<p><strong>Threshold</strong> - set the threshold from -40 dB to 0 dB or -80 dB to 0 dB according to the Low setting.</p>
+<p><strong>Ratio</strong> - set the expansion ratio from 1:1 to 10:1.</p>
+<p><strong>Attack</strong> - set the attack time from 0.1 ms to 200 ms.</p>
+<p><strong>Release</strong> - set the release time from 50 ms to 1 sec.</p>
+</div></blockquote>
+<p>The following controls apply to the sidechain (detector) signal:</p>
+<blockquote>
+<div><p><strong>Listen</strong> - replace the output signal with the sidechain signal for monitoring.</p>
+<p><strong>External</strong> - set the sidechain input to receive the signal through audio inputs 3/4.</p>
+<p><strong>Trim</strong> - adjust the input level of the sidechain signal from -20 dB to +20 dB.</p>
+<p><strong>Low Cut</strong> - set the cutoff of the highpass filter applied to the sidechain input from 10 Hz to 2 kHz.</p>
+</div></blockquote>
+<p>As the name might suggest the Expander is basically an ‘inverted’ compressor in that it allows dynamic range to be increased by applying gain reduction to the signal when it falls below a set threshold. These basic differences aside the controls of the Expander are much the same as those of the Compressor: set the Threshold to determine when gain reduction is applied and the Ratio to determine by how much.</p>
+<p>Although it is similar in operation to the Compressor, the signal flow of the Expander is closer to that of the Gate since it lacks the Makeup and Mix controls of the compressor:</p>
+<img alt="_images/FreeEffects_ExpanderSignalFlow.png" class="align-center" src="_images/FreeEffects_ExpanderSignalFlow.png" />
+<p>In fact it can be useful to think of the Expander as a Gate, in which the signal below the threshold is reduced rather than blocked.</p>
+<p>As with the Compressor and Gate the signal used to determine the gain reduction can be trimmed, filtered and monitored using the controls in the sidechain section. Activate the External switch to use an external signal (from inputs 3/4) to control the expansion.</p>
+</section>
+<section id="deesser">
+<h2>DeEsser<a class="headerlink" href="#deesser" title="Permalink to this headline">¶</a></h2>
+<p>A de-esser for reducing sibilance and other unwanted high-frequency sounds.</p>
+<img alt="_images/FreeEffects_DeEsser.png" class="align-center" src="_images/FreeEffects_DeEsser.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Input</strong> - adjust the input level from -20 dB to +20 dB.</p>
+<p><strong>Threshold</strong> - set the threshold from -80 dB to 0 dB.</p>
+<p><strong>Amount</strong> - set the reduction amount from 0 to 100%.</p>
+<p><strong>Attack</strong> - set the attack time from 1 ms to 100 ms.</p>
+<p><strong>Release</strong> - set the release time from 50 ms to 250 ms.</p>
+<p><strong>Low Freq</strong> - set the lower limit of the de-essing band from 1 kHz to 10 kHz.</p>
+<p><strong>High Freq</strong> - set the upper limit of the de-essing band from 1500 Hz to 15 kHz.</p>
+<p><strong>Listen</strong> - limit the output to just the de-essing band for monitoring.</p>
+</div></blockquote>
+<p>DeEsser allows the levels of excess sibilance and other unwanted high frequency sounds to be reduced. It is based on a narrow-band compressor that allows a selected range of frequencies to be dynamically reduced without affecting frequencies outside that range. The Low Freq and High Freq controls determine the range of the centre frequency band in which the DeEsser operates; anything above or below that range is left unchanged.</p>
+<p>Being based on a compressor, the DeEsser operates in much the same way as any other compressor; gain reduction is applied to the signal in the ‘de-essing’ band when it exceeds the Threshold level, by a ratio determined by the Amount control. Use these controls in combination with Low Freq and High Freq to best isolate and reduce the unwanted high frequency peaks in the input signal. Use the Listen switch to silence the frequencies outside the de-essing band allowing the effect of the gain reduction to be heard more clearly.</p>
+<p>Attack and Release work as they would in any other compressor; use them when necessary to smooth the changes in gain reduction applied to the signal.</p>
+<p>The DeEsser meter includes displays for stereo input, level reduction and stereo output:</p>
+<img alt="_images/FreeEffects_DeEsserMetering.png" class="align-center" src="_images/FreeEffects_DeEsserMetering.png" />
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reducktion.html">Reducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="free_effects.html">Free Effects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="free_effects.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="free_effects_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_filters.html">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_equalisers.html">Equalisers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_strips.html">Channel Strips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_delays.html">Delay and Reverb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_modulation.html">Modulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_distortion.html">Distortion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_utilities.html">Utilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_strips.html" title="Channel Strips"
+             >next</a></li>
+        <li class="right" >
+          <a href="free_effects_equalisers.html" title="Equalisers"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" >Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Dynamics</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

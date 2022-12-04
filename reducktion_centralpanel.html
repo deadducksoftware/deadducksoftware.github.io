@@ -1,0 +1,212 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The Central Panel &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Lower Panel" href="reducktion_lowerpanel.html" />
+    <link rel="prev" title="The Top Bar" href="reducktion_topbar.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reducktion_lowerpanel.html" title="The Lower Panel"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="reducktion_topbar.html" title="The Top Bar"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" accesskey="U">Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Central Panel</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-central-panel">
+<h1>The Central Panel<a class="headerlink" href="#the-central-panel" title="Permalink to this headline">¶</a></h1>
+<p>Reducktion features a simple signal flow that is reflected in the layout of the central panel.</p>
+<img alt="_images/Reducktion_CentralPanel.png" class="align-center" src="_images/Reducktion_CentralPanel.png" />
+<p>Sounds are originated in the three oscillators and noise generator. They are combined into stereo signals according to their volume and pan controls and directed to the filter section. Here the signal passes through the filters before reaching the amplifier stage which provides volume control via envelope 1.</p>
+<p>Similarly, the central panel features sections for the oscillators, noise, filters and amp reflecting the signal flow from left to right.</p>
+<p>In addition to these signal processing elements there are modulators and modulation controls; the central panel includes controls for the envelope generators and low-frequency oscillators (LFOs) that form the basis of Reducktion’s modulation system.</p>
+<section id="oscillators">
+<h2>Oscillators<a class="headerlink" href="#oscillators" title="Permalink to this headline">¶</a></h2>
+<p>Oscillators are the primary sound generators and provide waveforms according to three different generation modes:</p>
+<blockquote>
+<div><p><strong>Wave</strong> - generates saw, square, triangle or sine waves as either pure waves or a mix of two adjacent waves. See the following section on wave mode for more information.</p>
+<p><strong>Pulse</strong> - a rectangular pulse wave whose duty-cycle is determined by the Pos parameter. By default a square wave is produced corresponding to a Pos value of 50. Changing the value will alter the duty-cycle between 0 and 100.</p>
+<p><strong>FM</strong> - a simple phase-modulation ‘FM’ setting which provides a single sine-wave carrier and two sine-wave modulators. The modulators are arranged in series with Mod 2 modulating Mod 1 which in turn modulates the carrier (the main oscillator voice).</p>
+</div></blockquote>
+<p>Note: setting the mode to ‘- -’ will deactivate the oscillator.</p>
+<p>The three oscillators in Reducktion are identical and include the following parameters:</p>
+<img alt="_images/Reducktion_Oscillator.png" class="align-center" src="_images/Reducktion_Oscillator.png" />
+<blockquote>
+<div><p><strong>Mode</strong> - the waveform generation mode: Wave, Pulse, FM or off (‘- -’).</p>
+<p><strong>Pos</strong> - the mix amount for Wave mode or the duty-cycle setting in Pulse mode.</p>
+<p><strong>Phase</strong> - the starting phase of the wave. Set to the maximum value to select random phase.</p>
+<p><strong>Semi</strong> - the semitone tuning of the voice. This allows the tuning to be offset from the note being played by up to 2 octaves up or down (-24 st to + 24 st).</p>
+<p><strong>Fine</strong> - the fine tuning of the voice in cents adjustable between a semitone up or down (-100 ct to +100 ct).</p>
+<p><strong>Pan</strong> - the stereo pan position of the oscillator.</p>
+<p><strong>Volume</strong> - the volume level of the oscillator.</p>
+</div></blockquote>
+<p>In Wave and Pulse modes the oscillators present a set of controls for unison voicing. This allows up to 8 additional oscillators to be mixed into the main oscillator signal according to the following parameters:</p>
+<blockquote>
+<div><p><strong>Unison</strong> - the total number of oscillators playing in ‘unison’ from 2 to 9. These consist of the main oscillator and between 1 and 8 additional oscillators. These will be inactive until they are added to the main signal by raising the mix level from zero.</p>
+<p><strong>Detune</strong> - the amount by which each additional oscillator is detuned from the main oscillator pitch. The higher the value the greater the extra oscillators differ from the main oscillator.</p>
+<p><strong>Spread</strong> - the stereo pan positions of the additional oscillators. The higher the value the wider the stereo separation between the oscillators.</p>
+<p><strong>Mix</strong> - the level of the additional oscillators relative to the main oscillator.</p>
+</div></blockquote>
+<p>Note: the extra unison oscillators are related to each other as pairs (1-2, 3-4, 5-6, 7-8) such that the Detune and stereo Spread parameters are mirrored in each member of the pairs. So for example the first additional oscillator 1 is detuned to a pitch below the main note while the next is tuned above it. Similarly the first oscillator will be positioned to the left of the main oscillator with the second to the right. This is repeated at differing amounts of separation for the remaining pairs with each pair added from the widest pan to the narrowest so that a consistent stereo spread is maintained as the oscillator count is increased.</p>
+<p>For odd-numbered unison counts the main oscillator retains the base pitch of the voice with the additional oscillators being added in pairs at higher and lower pitches as determined by the detune amount. The main oscillator remains at the centre of the stereo field with the extra pairs being panned to the left and right according to the spread amount. The Mix parameter sets the volume level of all the additional pairs as a percentage of the central main oscillator.</p>
+<p>Even-numbered unison counts also feature additional oscillators added as pairs around the main oscillator; these are panned and detuned on either side as with odd-numbered counts. Unlike the odd-numbered cases, where there are enough oscillators to balance both sides of the main oscillator, the even cases will have an extra oscillator ‘left-over’ which can create an unbalanced sound when detuned and panned. To prevent this the main oscillator is progressively panned to the right and detuned as the remaining oscillators are mixed in to the main signal. This allows the overall sound to remain more consistent and at full mix will create completely balanced oscillator pairs with no central oscillator.</p>
+<p>When set to wave mode the oscillators can generate one of four different waveforms. The value of the Pos parameter is used to determine which one:</p>
+<blockquote>
+<div><p><strong>0</strong> - square.</p>
+<p><strong>25</strong> - triangle.</p>
+<p><strong>50</strong> - sawtooth.</p>
+<p><strong>75</strong> - sine.</p>
+<p><strong>100</strong> - square.</p>
+</div></blockquote>
+<p>Any Pos setting between these values will provide a mix of the two adjacent waveforms. For example a value of 40 will generate a mix of saw and triangle waves.</p>
+<p>Note: use the oscillator context menu to set the ‘unmixed’ waveforms directly.</p>
+<p>In FM mode the oscillator presents controls for the FM modulators:</p>
+<img alt="_images/Reducktion_OscillatorFm.png" class="align-center" src="_images/Reducktion_OscillatorFm.png" />
+<p>Reducktion’s FM mode provides a single carrier and two modulators which are combined in series to modulate the phase of the carrier. Both carrier and modulators generate sine waves and are controlled by the following parameters:</p>
+<p>Mod 1/Mod 2 - the modulation amounts applied to the respective modulation target. Mod 2 modulates modulator 1 while Mod 1 modulates the carrier (main oscillator).</p>
+<p>Ratio 1/Ratio 2 - the modulation frequency of each modulator as a ratio of the carrier frequency from 1:1 to 1:10 in half-step increments.</p>
+</section>
+<section id="noise">
+<h2>Noise<a class="headerlink" href="#noise" title="Permalink to this headline">¶</a></h2>
+<p>The noise generator provides white or pink noise:</p>
+<img alt="_images/Reducktion_Noise.png" class="align-center" src="_images/Reducktion_Noise.png" />
+<blockquote>
+<div><p><strong>Type</strong> - the type of noise generated: white, pink, stereo white or stereo pink.</p>
+<p><strong>Volume</strong> - the output level of the noise generator. This is mixed with the oscillator outputs and passed to Filter 1.</p>
+<p><strong>Pan</strong> - the stereo pan position of the noise output.</p>
+</div></blockquote>
+</section>
+<section id="filters">
+<h2>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
+<p>Reducktion provides two filters, both are identical and include the following parameters:</p>
+<img alt="_images/Reducktion_Filter.png" class="align-center" src="_images/Reducktion_Filter.png" />
+<blockquote>
+<div><p><strong>Type</strong> - the filter type: 24 dB/Oct Lowpass, 12 dB/oct Lowpass, Highpass, Bandpass, Bandstop (notch) or Peaking.</p>
+<p><strong>Cut</strong> - the filter cutoff frequency.</p>
+<p><strong>Res</strong> - the filter resonance level. Note: the LP24 filter will self-oscillate with a high enough resonance setting.</p>
+<p><strong>Key</strong> - the keyboard tracking amount. This enables the cutoff frequency to be adjusted according to the note being played. Set to 100 to make the cutoff follow the note. Lower values will cause the cutoff to ‘close down’ as the higher notes are played.</p>
+</div></blockquote>
+<p>Note: the frequency readout on the cutoff frequency control is only accurate when key tracking is set to zero. With tracking enabled the actual frequency will differ depending on the note being played.</p>
+<p>By default the filters are processed in series with the output of Filter 1 being passed to Filter 2 and on to the amp. Two additional modes are available: Parallel and Split.</p>
+<p>In Parallel mode both filters receive the same input from the oscillators and noise generator. In Split mode Filter 1 receives input from oscillators 1 and 3 while Filter 2 receives input from oscillator 2 and the noise generator. In either mode the output of both filters is combined and passed to the amp.</p>
+</section>
+<section id="envelopes">
+<h2>Envelopes<a class="headerlink" href="#envelopes" title="Permalink to this headline">¶</a></h2>
+<p>Reducktion provides three ADSR envelopes. Envelope 1 is dedicated to controlling the amplitude but all three can be used for any modulation task. They include the following parameters:</p>
+<img alt="_images/Reducktion_Envelope.png" class="align-center" src="_images/Reducktion_Envelope.png" />
+<blockquote>
+<div><p><strong>Attack</strong> - the attack time from 0 to 20s.</p>
+<p><strong>Decay</strong> - the  decay time from 0 to 20s</p>
+<p><strong>Sustain</strong> - the sustain level from 0 to 100.</p>
+<p><strong>Release</strong> - the release time from 0 to 20s</p>
+<p><strong>Vel</strong> - the velocity sensitivity from 0, where velocity has no effect and the envelope provides the maximum output level, to 100 where the velocity completely controls the output level.</p>
+</div></blockquote>
+<p>All of the modulator sections include modulation controls for selected parameters. In Envelope 1 these are:</p>
+<blockquote>
+<div><p><strong>O1 Pos</strong> - selects the modulation amount sent to the Pos parameter of Osc 1. This is active when FM mode is not selected.</p>
+<p><strong>O1 Mod 1</strong> - selects the modulation amount sent to the Mod 1 parameter of Osc 1. This is active when FM mode is selected.</p>
+<p><strong>O1 Tune</strong> - selects the modulation amount sent to the Tune parameter of Osc 1.</p>
+<p><strong>F1 Cut</strong> - selects the modulation amount sent to the Cut parameter of Filter 1.</p>
+</div></blockquote>
+<p>Envelopes 2 and 3 include similar controls for modulating Osc 2, Osc 3 and Filter 2.</p>
+</section>
+<section id="lfos">
+<h2>LFOs<a class="headerlink" href="#lfos" title="Permalink to this headline">¶</a></h2>
+<p>Reducktion provides three low-frequency oscillators which include the following parameters:</p>
+<img alt="_images/Reducktion_Lfo.png" class="align-center" src="_images/Reducktion_Lfo.png" />
+<blockquote>
+<div><p><strong>Type</strong> - the waveform generated: Triangle, Sine, Sawtooth, Square, Random Hold, Random Glide and Random Pulse. The random settings generate new amplitude values on each cycle; Random Hold provides fixed values between each random selection while Random Glide moves smoothly from each selection to the next. Random Pulse provides a pulse-wave of fixed amplitude with a randomly varying pulse width.</p>
+<p><strong>Rate</strong> - the rate of oscillation in Hz (0.01 to 20) or a host tempo-based rate (8/1 to 1/32T).</p>
+<p><strong>Sync</strong> - switches between a time- or tempo-based rate.</p>
+<p><strong>Free</strong> - enables free-running mode; the LFO becomes a global oscillator shared across all the active voices so that each is modulated in sync.</p>
+<p><strong>Offset</strong> - the amount by which the output is offset. By default the LFOs generate a modulation signal from -50 to +50. The Offset parameter allows this to be shifted by up to +/- 50 allowing modulation ranges between -100 to 0 and 0 to +100. See the modulation matrix section for more information about the modulation system</p>
+<p><strong>Phase</strong> - the starting phase of the wave. Use this to invert the waves or alter the starting modulation level (e.g. make a triangle start at its peak value).</p>
+<p><strong>Attack</strong> - the time required for the full modulation level to be applied from 0 to 20s. The modulation level rises from 0 to the full amount whenever a new note is played.</p>
+</div></blockquote>
+<p>The remaining parameters control the modulation amount sent to the oscillators and filters.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="reducktion.html">Reducktion</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="reducktion.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="reducktion_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_topbar.html">The Top Bar</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The Central Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_lowerpanel.html">The Lower Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_modmatrix.html">The Modulation Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_sequencer.html">The Sequencer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_themes.html">Themes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="free_effects.html">Free Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reducktion_lowerpanel.html" title="The Lower Panel"
+             >next</a></li>
+        <li class="right" >
+          <a href="reducktion_topbar.html" title="The Top Bar"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" >Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Central Panel</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

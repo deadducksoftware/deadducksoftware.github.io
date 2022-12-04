@@ -1,0 +1,151 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The Top Bar &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Central Panel" href="reducktion_centralpanel.html" />
+    <link rel="prev" title="Overview" href="reducktion_overview.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reducktion_centralpanel.html" title="The Central Panel"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="reducktion_overview.html" title="Overview"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" accesskey="U">Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Top Bar</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-top-bar">
+<h1>The Top Bar<a class="headerlink" href="#the-top-bar" title="Permalink to this headline">¶</a></h1>
+<p>The top bar provides access to the system menu, preset browser, voice display and master volume control.</p>
+<img alt="_images/Reducktion_TopBar.png" class="align-center" src="_images/Reducktion_TopBar.png" />
+<section id="system-menu">
+<h2>System Menu<a class="headerlink" href="#system-menu" title="Permalink to this headline">¶</a></h2>
+<p>To access the system menu right-click the Reducktion logo or any empty space within the top bar area. It contains the following options:</p>
+<blockquote>
+<div><p><strong>Save Preset</strong> - save the current plugin settings to a file. This can be saved anywhere but the preset will only appear in the preset browser if it is saved within the Presets directory in the Reducktion home folder.</p>
+<p><strong>Load Preset</strong> - load a previously saved preset into the plugin. All parameters will be updated with the values in the preset file.</p>
+<p><strong>Init Preset</strong> - restore all parameters to their default values. By default Reducktion will use internal default values but this can be overridden using a preset file named ‘_init.prs’. This must be located in the Preset home directory and will be used to initialise the plugin when first loaded or when Init Preset is selected from the menu.</p>
+<p><strong>Size</strong> - select from a choice of sizes for the plugin window: 100%, 125%, 150%, 175% and 200%. To change the size select the required option and reopen the plugin window.</p>
+<p><strong>Themes</strong> - select from a choice of themes. Make a selection and reopen the plugin window to see the changes.</p>
+</div></blockquote>
+<p>Note when changing the size or themes some hosts may require the plugin to be completely unloaded before the changes will take effect. Also, make sure there are no other instances of Reducktion in use as these may override the new settings when unloaded.</p>
+<p>Theme and size changes will persist between sessions.</p>
+<blockquote>
+<div><p><strong>Preset Banks</strong> - select from a list of plugin banks available. Selecting a bank will make its contents visible in the preset browser.</p>
+<p><strong>Settings</strong> - set system level options. This provides access to the Mod CC 1 &amp; 2 configuration values.</p>
+</div></blockquote>
+<p>See the Modulation Matrix section later in this guide for more information.</p>
+<blockquote>
+<div><p><strong>Show Home Folder</strong> - open the home folder in Windows Explorer.</p>
+<p><strong>About</strong> - information about the plugin.</p>
+</div></blockquote>
+</section>
+<section id="preset-browser">
+<h2>Preset Browser<a class="headerlink" href="#preset-browser" title="Permalink to this headline">¶</a></h2>
+<p>The preset browser occupies the centre section of the top bar. It shows the current preset and provides a way to navigate the contents of the currently selected preset bank.</p>
+<img alt="_images/Reducktion_PresetBrowser.png" class="align-center" src="_images/Reducktion_PresetBrowser.png" />
+<p>To select a preset click the preset name panel. A menu will appear listing the names of the presets available; click a name to load its parameters into the plugin. Alternately click the ‘&lt;’ and ‘&gt;’ arrows to navigate from preset to preset loading each one in turn.</p>
+<p>Reduction features a file-based preset management system in which presets are saved and loaded  as files. The presets listed in the browser a simply files stored in the preset home directory and can be copied, moved or deleted just as you would any other document. To create a new preset simply save the current parameters with a new name.</p>
+<p>Beware that switching presets, either via the browser or by loading directly from a file, will cause the current parameters to be overridden. Make sure to always save any changes you want to keep before selecting a new preset.</p>
+<p>The presets displayed in the list are determined by the currently selected preset bank. A bank is simply a subdirectory within the ‘Presets’ home folder. As mentioned the currently selected bank is set using the system menu.</p>
+<p>Note the selected bank only persists for the current session. The default bank will always be selected when the plugin is first loaded.</p>
+<p>Preset banks must be located at the top level within the Preset folder; nested banks are not supported.</p>
+</section>
+<section id="voice-display">
+<h2>Voice Display<a class="headerlink" href="#voice-display" title="Permalink to this headline">¶</a></h2>
+<p>The voice display is located directly below the preset browser and shows the current voice activity. A highlighted segment indicates that a voice is playing.</p>
+<img alt="_images/Reducktion_VoiceDisplay.png" class="align-center" src="_images/Reducktion_VoiceDisplay.png" />
+</section>
+<section id="filter-mode">
+<h2>Filter Mode<a class="headerlink" href="#filter-mode" title="Permalink to this headline">¶</a></h2>
+<p>Reducktion’s filters can be arranged in three different ways; use this selection menu to choose between Serial, Parallel or Split modes. See the Filter section later in this guide for more information.</p>
+</section>
+<section id="master-volume">
+<h2>Master Volume<a class="headerlink" href="#master-volume" title="Permalink to this headline">¶</a></h2>
+<p>The Master Volume parameter display controls the main output level. This is the final stage of the audio signal path and the output is passed to the host for further processing.</p>
+<p>Reducktion includes a +3dB hard clipper at the output stage to prevent excessive audio levels from reaching the host.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="reducktion.html">Reducktion</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="reducktion.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="reducktion_overview.html">Overview</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The Top Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_centralpanel.html">The Central Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_lowerpanel.html">The Lower Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_modmatrix.html">The Modulation Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_sequencer.html">The Sequencer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_themes.html">Themes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="free_effects.html">Free Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reducktion_centralpanel.html" title="The Central Panel"
+             >next</a></li>
+        <li class="right" >
+          <a href="reducktion_overview.html" title="Overview"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" >Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Top Bar</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

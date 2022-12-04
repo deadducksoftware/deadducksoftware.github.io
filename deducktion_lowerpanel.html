@@ -1,0 +1,190 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The Lower Panel &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Modulation Matrix" href="deducktion_modmatrix.html" />
+    <link rel="prev" title="The Central Panel" href="deducktion_centralpanel.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="deducktion_modmatrix.html" title="The Modulation Matrix"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="deducktion_centralpanel.html" title="The Central Panel"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="deducktion.html" accesskey="U">Deducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Lower Panel</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-lower-panel">
+<h1>The Lower Panel<a class="headerlink" href="#the-lower-panel" title="Permalink to this headline">¶</a></h1>
+<p>The sub-panel contains five separate pages accessed by the selection links at the bottom of the panel.</p>
+<img alt="_images/Deducktion_LowerMenu.png" class="align-center" src="_images/Deducktion_LowerMenu.png" />
+<p>The pages available are:</p>
+<blockquote>
+<div><p><strong>MOD1</strong> - modulation matrix slots 1 to 12.</p>
+<p><strong>MOD2</strong> - modulation matrix slots 13 to 24.</p>
+<p><strong>OSC</strong> - additional oscillator parameters.</p>
+<p><strong>PLAY</strong> - global parameters affecting playback.</p>
+<p><strong>FX</strong> - the delay and reverb effects.</p>
+</div></blockquote>
+<p>The MOD1, MOD2 and OSC pages are described in their own sections of this guide. The PLAY and FX pages are decribed below.</p>
+<section id="the-play-page">
+<h2>The PLAY Page<a class="headerlink" href="#the-play-page" title="Permalink to this headline">¶</a></h2>
+<p>The PLAY page includes PLAY, ROUTING and MIDI LEARN.</p>
+<section id="play">
+<h3>PLAY<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h3>
+<p>The PLAY section provides access to these settings:</p>
+<img alt="_images/Deducktion_Play.png" class="align-center" src="_images/Deducktion_Play.png" />
+<blockquote>
+<div><p><strong>Tuning</strong> - the master tuning for the synthesizer in Hz from 390 Hz to 490 Hz.</p>
+<p><strong>Key Split</strong> - the MIDI note at which the upper keyboard split begins from 0 to 127.</p>
+<p><strong>Polyphony</strong> - the maximum number of voices that can play at the same time. Set to 1 for monophonic playback.</p>
+<p><strong>Glide Time</strong> - the glide (portamento) time in ms from 0 to 2 sec. Only available in mono mode.</p>
+<p><strong>PBend Up/Down</strong> - the maximum range for the pitch-bend controller from 0 to 24 st.</p>
+<p><strong>MOD CC 1/2</strong> - the MIDI CC message to be translated into the corresponding modulation source. See the Modulation Matrix section for more information.</p>
+</div></blockquote>
+<p>Deducktion can operate in polyphonic or monophonic playback modes. In polyphonic mode each new keypress will result in an additional voice playing to give the desired polyphonic sound up to the maximum number of voices allowed. In monophonic mode a single voice is used to play all notes and each subsequent keypress will cause the voice to adopt each new note in turn. When a new key is pressed before the previous key has been released the voice will operate in ‘legato’ mode.</p>
+<p>Legato mode influences both retrigger and glide behaviour when in mono playback mode. Glide between notes will only occur when notes overlap. Retriggering causes modulation envelopes and LFOs to reset when a new note is played and will only occur when notes don’t overlap.</p>
+<p>Key split allows each oscillator to respond to a different section of the keyboard. Oscillator 1 responds to the lower part of the split while oscillator 2 responds to the upper part.</p>
+</section>
+<section id="routing">
+<h3>ROUTING<a class="headerlink" href="#routing" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/Deducktion_Routing.png" class="align-center" src="_images/Deducktion_Routing.png" />
+<p>Deducktion has five different routing modes allowing the oscillators, filters and amps to be combined in different ways:</p>
+<img alt="_images/Deducktion_RoutingModes.png" class="align-center" src="_images/Deducktion_RoutingModes.png" />
+<p>Modes 1, 2 and 4 combine the filters in serial and parallel arrangements but feed both oscillators into a single output. Modes 3 and 5 allow each oscillator to output through separate amps allowing each to act independently of the other.</p>
+</section>
+<section id="midi-learn">
+<h3>MIDI LEARN<a class="headerlink" href="#midi-learn" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/Deducktion_MidiLearn.png" class="align-center" src="_images/Deducktion_MidiLearn.png" />
+<p>MIDI Learn allows external MIDI controllers to control the parameters presented by the user interface and consists of three parts:</p>
+<blockquote>
+<div><p><strong>Listen Switch</strong> - the switch to the left of the MIDI Learn title enables and disables ‘listening’.</p>
+<p><strong>Selected Control</strong> - the currently selected control.</p>
+<p><strong>Assigned CC</strong> - the CC value assigned to the selected control.</p>
+</div></blockquote>
+<p>Deducktion responds to MIDI CC values from 0 to 119 and these can be assigned to most of the available controls.</p>
+<p>On selecting a parameter control its name and current MIDI status will appear in the Selected Control display. If a CC controller has already been assigned its value will appear, otherwise the value will be ‘none’. If a selected control does not appear it means the parameter cannot be controlled externally.</p>
+<p>To remove an assigned controller ctrl-click the Assigned CC display.</p>
+<p>To assign a controller click the listen switch to activate ‘listening’ and click the parameter you wish to assign. Move the hardware control you wish to assign until the parameter begins to change and its CC value appears in the Assigned CC display. Click the listen switch again to deactivate listening.</p>
+<p>Multiple controls can be selected while listening is active, simply click each one in turn and move the corresponding hardware controller for each.</p>
+<p>Assigned CC controllers are saved on exit and will persist across sessions.</p>
+</section>
+</section>
+<section id="the-fx-page">
+<h2>The FX Page<a class="headerlink" href="#the-fx-page" title="Permalink to this headline">¶</a></h2>
+<p>The FX page contains the DELAY and REVERB effects. These are included in serial at the end of the signal processing chain before the final output.</p>
+<section id="delay">
+<h3>DELAY<a class="headerlink" href="#delay" title="Permalink to this headline">¶</a></h3>
+<p>Delay is a mono-delay with optional ‘ping-pong’ stereo output and tempo-sync.</p>
+<img alt="_images/Deducktion_Delay.png" class="align-center" src="_images/Deducktion_Delay.png" />
+<p>The following controls are available:</p>
+<blockquote>
+<div><p><strong>Delay Mix</strong> - set the dry/wet balance of the output from all dry (0) to all wet (100%).</p>
+<p><strong>Delay Time</strong> - set the delay time from 10 ms to 6 sec or 1/32T to 1/1D according to the sync setting.</p>
+<p><strong>Tempo Sync</strong> - switch between frequency (off) and tempo-based timing (on).</p>
+<p><strong>Feedback</strong> - set the feedback level applied to the delay.</p>
+<p><strong>Filter Cutoff</strong> - set the filter cutoff frequency. The filter is applied to the delay returns before being mixed with the input signal.</p>
+<p><strong>Use LP</strong> - set the filter to lowpass. The default is a highpass filter.</p>
+<p><strong>Stereo Width</strong> - set the stereo separation for the ‘ping-pong’ output from -100% (L-R) to +100% (R-L).</p>
+<p><strong>Amp 1 Only</strong> - bypass the delay effect for amp 2 in routing modes that provide dual outputs.</p>
+</div></blockquote>
+</section>
+<section id="reverb">
+<h3>REVERB<a class="headerlink" href="#reverb" title="Permalink to this headline">¶</a></h3>
+<p>An efficient algorithmic reverb with pre-delay.</p>
+<img alt="_images/Deducktion_Reverb.png" class="align-center" src="_images/Deducktion_Reverb.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Reverb Mix</strong> - set the dry/wet balance of the output from all dry (0) to all wet (100%).</p>
+<p><strong>Predelay</strong> - set the delay before the reverb return signals are heard from 0 to 1 sec or 1/32T to 1/4 according to the sync setting.</p>
+<p><strong>Tempo Sync</strong> - switch between frequency (off) and tempo-based timing (on) for the predelay time.</p>
+<p><strong>Room Size</strong> - set the size of the simulated reverb space from 0 (small) to 100% (large).</p>
+<p><strong>Damping</strong> - set the amount by which the reverberations are deadened from 0 to 100%.</p>
+<p><strong>Density</strong> - set the amount of reverberations generated from 0 (low) to 100% (high).</p>
+<p><strong>Stereo Width</strong> - set the width of the stereo space occupied by the reverberations from 0 (mono) to 100%.</p>
+<p><strong>Amp 1 Only</strong> - bypass the reverb effect for amp 2 in routing modes that provide dual outputs.</p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reducktion.html">Reducktion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="deducktion.html">Deducktion</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="deducktion.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deducktion_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deducktion_topbar.html">The Top Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deducktion_centralpanel.html">The Central Panel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The Lower Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deducktion_modmatrix.html">The Modulation Matrix</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="free_effects.html">Free Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="deducktion_modmatrix.html" title="The Modulation Matrix"
+             >next</a></li>
+        <li class="right" >
+          <a href="deducktion_centralpanel.html" title="The Central Panel"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="deducktion.html" >Deducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Lower Panel</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

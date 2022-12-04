@@ -1,0 +1,198 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The Lower Panel &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Modulation Matrix" href="reducktion_modmatrix.html" />
+    <link rel="prev" title="The Central Panel" href="reducktion_centralpanel.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reducktion_modmatrix.html" title="The Modulation Matrix"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="reducktion_centralpanel.html" title="The Central Panel"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" accesskey="U">Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Lower Panel</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-lower-panel">
+<h1>The Lower Panel<a class="headerlink" href="#the-lower-panel" title="Permalink to this headline">¶</a></h1>
+<p>The sub-panel contains three separate pages accessed by the selection links on the left of the panel.</p>
+<img alt="_images/Reducktion_LowerMenu.png" class="align-center" src="_images/Reducktion_LowerMenu.png" />
+<p>The pages available are:</p>
+<blockquote>
+<div><p><strong>MAIN</strong> - controls for general parameters, the MIDI learn function and the effects.</p>
+<p><strong>MOD</strong> - the modulation matrix. This is described in a separate section.</p>
+<p><strong>SEQ</strong> - the sequencer. This is described in a separate section.</p>
+</div></blockquote>
+<p>The sections contained in the MAIN page are as follows.</p>
+<section id="control">
+<h2>Control<a class="headerlink" href="#control" title="Permalink to this headline">¶</a></h2>
+<p>The control section provides access to these settings:</p>
+<img alt="_images/Reducktion_Control.png" class="align-center" src="_images/Reducktion_Control.png" />
+<p>Reducktion can operate in either polyphonic or monophonic playback modes. In polyphonic mode each new keypress will result in an additional voice playing to give the desired polyphonic sound up to the maximum number of voices allowed. In monophonic mode a single voice is used to play all notes and each subsequent keypress will cause the voice to adopt each new note in turn. When a new key is pressed before the previous key has been released the voice will operate in ‘legato’ mode.</p>
+<blockquote>
+<div><p><strong>Voices</strong> - the maximum number of voices that can play at the same time. Set to 1 for monophonic playback.</p>
+<p><strong>Mono Mode</strong> - the retrigger behaviour for monophonic playback. This determines the behaviour of modulation envelopes and LFOs at the start of each new note. When set to ‘Retrig’ envelopes and LFOs will always be reset to their starting points (‘retriggered’) whenever a new note is played. In ‘Legato’ mode envelopes and LFOs are not retriggered when legato playback occurs but will retrigger when keypresses do not overlap.</p>
+<p>Note, only envelopes 2 and 3 are fully reset. To avoid unwanted clicking in the audio stream envelope 1 is reset to its attack state but its output level will be left unchanged.</p>
+<p><strong>Glide</strong> - the glide (portamento) time in ms. This is only available in mono mode.</p>
+<p><strong>Glide Mode</strong> - set to ‘Legato’ to glide between notes only when they overlap or to ‘All’ to glide between all notes.</p>
+<p><strong>Tuning</strong> - the master tuning for the synthesizer in Hz from 390Hz to 490Hz.</p>
+<p><strong>Pitch Bend</strong> - the maximum range for the pitch-bend controller from 0 to 24 semitones.</p>
+</div></blockquote>
+</section>
+<section id="midi-learn">
+<h2>MIDI Learn<a class="headerlink" href="#midi-learn" title="Permalink to this headline">¶</a></h2>
+<p>This allows external MIDI controllers to control parameters presented by the user interface.</p>
+<img alt="_images/Reducktion_Midi.png" class="align-center" src="_images/Reducktion_Midi.png" />
+<p>Reducktion responds to MIDI CC (control change) values from 0 to 119 and these can be assigned to most of the available controls. Assignable controls will appear by name in the selected window when clicked. If not the parameter cannot be controlled externally.</p>
+<p>On selecting a parameter control its name and current MIDI status should appear in the MIDI Learn display. If a CC controller has already been assigned its value will appear in the Assigned CC display.</p>
+<p>To remove an assigned controller ctrl-click the Assigned CC display.</p>
+<p>To assign a controller click the Listen control to activate ‘listening’ and click the parameter you wish to assign. Move the hardware control until the parameter begins to change and its CC value appears in the Assigned CC display. Click listen again to deactivate listening.</p>
+<p>Multiple controls can be selected while listening is active; simply click each one in turn and move the corresponding hardware controller for each.</p>
+<p>Assigned CC controllers are saved on exit and will persist across sessions.</p>
+</section>
+<section id="effects">
+<h2>Effects<a class="headerlink" href="#effects" title="Permalink to this headline">¶</a></h2>
+<p>The remaining sections in the the lower panel main page provide a series of effects. These are applied in series in the order presented from left to right. The effects are applied after the amplifier stage but before the master volume control.</p>
+</section>
+<section id="drive">
+<h2>Drive<a class="headerlink" href="#drive" title="Permalink to this headline">¶</a></h2>
+<p>The drive effect provides distortion:</p>
+<img alt="_images/Reducktion_Drive.png" class="align-center" src="_images/Reducktion_Drive.png" />
+<blockquote>
+<div><p><strong>Amount</strong> - the amount of overdrive applied to the signal.</p>
+<p><strong>Gain</strong> - raise or lower the gain by +/-20 dB. This is applied after the overdrive effect to adjust the signal level after the effect has been applied.</p>
+</div></blockquote>
+<p>Note: Gain can also be used without the overdrive as an input gain trim for the effects chain.</p>
+</section>
+<section id="equaliser">
+<h2>Equaliser<a class="headerlink" href="#equaliser" title="Permalink to this headline">¶</a></h2>
+<p>A two-band equaliser with high and low shelf or bell curves:</p>
+<img alt="_images/Reducktion_Equaliser.png" class="align-center" src="_images/Reducktion_Equaliser.png" />
+<blockquote>
+<div><p><strong>Gain 1</strong> - the amount of gain applied to the lower band from -20 dB to +20 dB.</p>
+<p><strong>Freq 1</strong> - the centre frequency of the lower band from 20Hz to 1kHz.</p>
+<p><strong>Gain 2</strong> - the amount of gain applied to the upper band from -20 dB to +20 dB.</p>
+<p><strong>Freq 2</strong> - the centre frequency of the upper band from 500Hz to 18kHz.</p>
+</div></blockquote>
+<p>By default both bands provide shelving responses. To switch to a bell-shaped curve right-click the equaliser title bar to access the context menu.</p>
+</section>
+<section id="chorus">
+<h2>Chorus<a class="headerlink" href="#chorus" title="Permalink to this headline">¶</a></h2>
+<p>A stereo chorus:</p>
+<img alt="_images/Reducktion_Chorus.png" class="align-center" src="_images/Reducktion_Chorus.png" />
+<blockquote>
+<div><p><strong>Rate</strong> - the modulation rate from 0.1Hz to 10Hz.</p>
+<p><strong>Delay</strong> - the maximum delay time applied to the signal from 0.1ms to 10ms.</p>
+<p><strong>Depth</strong> - the amount by which the delay is varied by the modulator.</p>
+<p><strong>Mix</strong> - the dry/wet mix between the original signal and the chorus output with 0 being no chorus and 100 all chorus.</p>
+</div></blockquote>
+</section>
+<section id="delay">
+<h2>Delay<a class="headerlink" href="#delay" title="Permalink to this headline">¶</a></h2>
+<p>A delay with tempo-sync and ping-pong:</p>
+<img alt="_images/Reducktion_Delay.png" class="align-center" src="_images/Reducktion_Delay.png" />
+<blockquote>
+<div><p><strong>Time</strong> - the delay applied to the input signal in time (10ms to 6s) or host tempo units (1/32T to 1/1D).</p>
+<p><strong>Sync</strong> - switch between time-based and tempo-based timing.</p>
+<p><strong>Feedback</strong> - set the percentage of the delayed signal to be fed back into the input. Can be set to 100 for infinitely repeating delays.</p>
+<p><strong>Width</strong> - sets the stereo spread of the delayed signal. The stereo input of the delay is combined into a mono signal. With Width set to 0 the output is centred in the stereo field. Setting any other value causes the delayed signal to be played on either side in a ‘ping-pong’ style; the larger the value the wider the stereo spread. Positive values cause the ping-pong to start on the right, negative values on the left.</p>
+<p><strong>Lo Cut</strong> - a high-pass filter applied to the delayed signal from 10Hz to 14kHz.</p>
+<p><strong>Mix</strong> - the dry/wet mix between the original signal and the delayed output. At 100 the input and output signals are mixed equally.</p>
+</div></blockquote>
+</section>
+<section id="reverb">
+<h2>Reverb<a class="headerlink" href="#reverb" title="Permalink to this headline">¶</a></h2>
+<p>A reverb effect:</p>
+<img alt="_images/Reducktion_Reverb.png" class="align-center" src="_images/Reducktion_Reverb.png" />
+<blockquote>
+<div><p><strong>Size</strong> - the size of the room being emulated by the reverb.</p>
+<p><strong>Damping</strong> - the rate at which the reverberations are reduced.</p>
+<p><strong>Width</strong> - the width of the stereo spread occupied by the reverberations.</p>
+<p><strong>Mix</strong> -  the dry/wet mix between the original signal and the reverb output. At 100 the input and output signals are mixed equally</p>
+</div></blockquote>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="reducktion.html">Reducktion</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="reducktion.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="reducktion_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_topbar.html">The Top Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_centralpanel.html">The Central Panel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The Lower Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_modmatrix.html">The Modulation Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_sequencer.html">The Sequencer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_themes.html">Themes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="free_effects.html">Free Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reducktion_modmatrix.html" title="The Modulation Matrix"
+             >next</a></li>
+        <li class="right" >
+          <a href="reducktion_centralpanel.html" title="The Central Panel"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" >Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Lower Panel</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

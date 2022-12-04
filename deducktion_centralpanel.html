@@ -1,0 +1,186 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The Central Panel &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Lower Panel" href="deducktion_lowerpanel.html" />
+    <link rel="prev" title="The Top Bar" href="deducktion_topbar.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="deducktion_lowerpanel.html" title="The Lower Panel"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="deducktion_topbar.html" title="The Top Bar"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="deducktion.html" accesskey="U">Deducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Central Panel</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-central-panel">
+<h1>The Central Panel<a class="headerlink" href="#the-central-panel" title="Permalink to this headline">¶</a></h1>
+<p>Deducktion features a versatile signal flow. Sounds originate in the two oscillators before being passed through the filters and on to the amplifiers after which the sound is sent to the host. In addition to these signal processing elements there are modulators and other controls which shape the sound as it passes thought the synthesizer. All of these elements are controlled by sections found within the central panel.</p>
+<section id="oscillators">
+<h2>Oscillators<a class="headerlink" href="#oscillators" title="Permalink to this headline">¶</a></h2>
+<p>The two oscillators in Reducktion are identical and include the following parameters:</p>
+<img alt="_images/Deducktion_Oscillator.png" class="align-center" src="_images/Deducktion_Oscillator.png" />
+<blockquote>
+<div><p><strong>Type Menu</strong> - set the oscillator waveform (see below).</p>
+<p><strong>Semi</strong> - set the semitone tuning from -24 st to + 24 st.</p>
+<p><strong>Fine</strong> - set the fine tuning from -100 ct to +100 ct.</p>
+<p><strong>Detune</strong> - set the detuning of the unison voices from 0 to 100.</p>
+<p><strong>Sub</strong> - set the level of the sub-oscillator (see below).</p>
+<p><strong>Volume</strong> - set the volume level of the oscillator.</p>
+</div></blockquote>
+<p>The type menu offers the following choices of waveform: sawtooth, square, triangle, sine, white noise, pink noise, chime and organ. By default the square option provides a standard square wave; use the pulse width option to produce a pulse wave.</p>
+<p>All oscillator selections can be detuned to take advantage of Deducktion’s ‘unison’ voicing feature. When an oscillator is detuned up to 6 extra oscillators are added to the voice with slightly different tunings to create a thicker and more dynamic sound.</p>
+<p>In addition to the parameters described here, additional oscillator controls are available in the lower panel Osc section:</p>
+<img alt="_images/Deducktion_OscillatorLower.png" class="align-center" src="_images/Deducktion_OscillatorLower.png" />
+<blockquote>
+<div><p><strong>Pan</strong> - set the stereo pan position of the oscillator.</p>
+<p><strong>Phase</strong> - set the starting phase of the oscillator from 0 to 100%. Set to maximum for random phase.</p>
+<p><strong>Pulse Width</strong> - set the pulse width of the square waveform from 0 to 100%.</p>
+<p><strong>Detune Voices</strong> - set the number of extra oscillators added by the unison effect.</p>
+<p><strong>Detune Spread</strong> - set the stereo separation of the additional unison voices.</p>
+<p><strong>Detune Mix</strong> - set the level of the additional voices relative to the main oscillator.</p>
+</div></blockquote>
+<p>Note phase only affects the sub oscillator when in default mode. In alt mode the phase remains fixed allowing the main oscillator phase to be changed relative to the sub.</p>
+</section>
+<section id="sub-oscillators">
+<h2>Sub Oscillators<a class="headerlink" href="#sub-oscillators" title="Permalink to this headline">¶</a></h2>
+<p>The Sub control of each oscillator section provides a number of different output options.</p>
+<p>It is a bipolar control and increases the volume of the output from 0 at the 12 o’clock position to maximum in either direction. The actual waveform produced depends on the direction turned. By default clockwise produces a square wave while anti-clockwise produces a triangle wave.</p>
+<p>Alternatively the sub oscillator can be switched to ‘alt’ mode allowing it to operate as a second, independent oscillator within the oscillator section.</p>
+<p>Alt mode is enabled via the oscillator section menu which includes the following options for the sub:</p>
+<blockquote>
+<div><p><strong>Sub: Follow Osc PW</strong> - make the square sub-oscillator follow the pulse width of the main oscillator. Turning this off sets the square sub-oscillator to 50% pulse width at all times.</p>
+<p><strong>Sub: Follow Osc Vol</strong> - make the sub oscillator volume follow the volume of the main oscillator. With this on the sub is always relative to the mian oscillator. Turning it off allows it to play independently.</p>
+<p><strong>Sub Alt Mode: Off</strong> - turn alt mode off, restoring the default triangle/square options with a -1 octave tuning.</p>
+<p><strong>Sub Alt Mode: Sawtooth / Square</strong> - activate alt mode by replacing the default waves with sawtooth and square with the former in the anti-clockwise direction and the latter in the clockwise direction.</p>
+<p><strong>Sub Alt Mode: Triangle / Sine</strong> - activate alt mode by replacing the default waves with triangle and sine with the former in the anti-clockwise direction and the latter in the clockwise direction.</p>
+<p><strong>Sub Alt Mode: White / Pink</strong> -activate alt mode by replacing the default waves with white and pink noise with the former in the anti-clockwise direction and the latter in the clockwise direction.</p>
+<p><strong>Sub Alt Mode: Chime / Organ</strong> - activate alt mode by replacing the default waves with chime and organ with the former in the anti-clockwise direction and the latter in the clockwise direction.</p>
+</div></blockquote>
+<p>In addition to selecting the waveform combination, alt mode will also overide the sub-oscillator tuning. By default (i.e. alt mode off) the sub will follow the tuning of the main oscillator but one octave down. In alt mode the sub will be tuned based on the note being played and the following modifications from the lower panel Osc section:</p>
+<blockquote>
+<div><p><strong>Alt Semi</strong> - set the oscllator tuning from -24 st to +24 st.</p>
+<p><strong>Alt Fine</strong> - set the oscllator tuning from -100 ct to +100 ct.</p>
+</div></blockquote>
+</section>
+<section id="filters">
+<h2>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
+<p>Deducktion provides two identical filters which include the following parameters:</p>
+<img alt="_images/Deducktion_Filter.png" class="align-center" src="_images/Deducktion_Filter.png" />
+<blockquote>
+<div><p><strong>Type Menu</strong> - set the filter type to 24 dB/Oct Lowpass, 12 dB/oct Lowpass, Highpass, Bandpass, Bandstop (notch) or Peaking.</p>
+<p><strong>Cutoff</strong> - the filter cutoff frequency.</p>
+<p><strong>Resonance</strong> - the filter resonance level. The LP24 filter will self-oscillate with a high enough resonance setting.</p>
+<p><strong>Key Track</strong> - the keyboard tracking amount. This enables the cutoff frequency to be adjusted according to the note being played. Set to 100 to make the cutoff follow the note; lower values will cause the cutoff to ‘close down’ as the higher notes are played.</p>
+</div></blockquote>
+<p>Note: the frequency readout on the cutoff frequency control is only accurate when key tracking is set to zero. With tracking enabled the actual frequency will differ depending on the note being played. In such cases the parameter will be displayed in percent.</p>
+<p>The order in which the filters appear in the signal flow depends on the routing selected. This is defined in the lower panel Play section. See elsewhere in this guide for more information.</p>
+</section>
+<section id="envelopes">
+<h2>Envelopes<a class="headerlink" href="#envelopes" title="Permalink to this headline">¶</a></h2>
+<p>Deducktion provides four ADSR envelopes. Envelopes 1 and 2 are reserved for controlling amplitude levels in the different routing options available but all four can be used for any modulation task. They include the following parameters:</p>
+<img alt="_images/Deducktion_Envelope.png" class="align-center" src="_images/Deducktion_Envelope.png" />
+<blockquote>
+<div><p><strong>Attack</strong> - the attack time from 1 ms to 20 sec.</p>
+<p><strong>Decay</strong> - the  decay time from 1 ms to 20 sec.</p>
+<p><strong>Sustain</strong> - the sustain level from 0 to 100.</p>
+<p><strong>Release</strong> - the release time from 1 ms to 20 sec.</p>
+<p><strong>Vel Sens</strong> - the velocity sensitivity from 0, where velocity has no effect and the envelope provides the maximum output level, to 100 where the velocity completely controls the output level.</p>
+</div></blockquote>
+</section>
+<section id="lfos">
+<h2>LFOs<a class="headerlink" href="#lfos" title="Permalink to this headline">¶</a></h2>
+<p>Deducktion provides four low-frequency oscillators which include the following parameters:</p>
+<img alt="_images/Deducktion_Lfo.png" class="align-center" src="_images/Deducktion_Lfo.png" />
+<blockquote>
+<div><p><strong>Type Menu</strong> - set the waveform generated to Sine, Triangle, Square, Sawtooth or Random. The random setting generates a new amplitude value on each cycle.</p>
+<p><strong>Rate</strong> - set the rate of oscillation in Hz (0.01 to 50) or a host tempo-based rate (8/1 to 1/32T).</p>
+<p><strong>Free</strong> - set free-running mode where the LFO becomes a global oscillator shared across all the active voices so that each is modulated in sync.</p>
+<p><strong>Sync</strong> - switch between a time or tempo-based rate.</p>
+<p><strong>Phase</strong> - set the starting phase of the wave. Use this to invert the waves or alter the starting modulation level (e.g. make a triangle start at its peak value.)</p>
+<p><strong>Offset</strong> - set the amount by which the output is offset. By default the LFOs generate a modulation signal from -50 to +50. The Offset parameter allows this to be shifted by up to +/- 50 allowing modulation ranges between -100 to 0 and 0 to +100. See the modulation matrix section for more information about the modulation system</p>
+</div></blockquote>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reducktion.html">Reducktion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="deducktion.html">Deducktion</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="deducktion.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deducktion_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deducktion_topbar.html">The Top Bar</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The Central Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deducktion_lowerpanel.html">The Lower Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deducktion_modmatrix.html">The Modulation Matrix</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="free_effects.html">Free Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="deducktion_lowerpanel.html" title="The Lower Panel"
+             >next</a></li>
+        <li class="right" >
+          <a href="deducktion_topbar.html" title="The Top Bar"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="deducktion.html" >Deducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Central Panel</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

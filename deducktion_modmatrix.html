@@ -1,0 +1,153 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The Modulation Matrix &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Free Effects" href="free_effects.html" />
+    <link rel="prev" title="The Lower Panel" href="deducktion_lowerpanel.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects.html" title="Free Effects"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="deducktion_lowerpanel.html" title="The Lower Panel"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="deducktion.html" accesskey="U">Deducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Modulation Matrix</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-modulation-matrix">
+<h1>The Modulation Matrix<a class="headerlink" href="#the-modulation-matrix" title="Permalink to this headline">¶</a></h1>
+<p>The modulation matrix is the main focus of Deducktion’s modulation system and is located in the lower panel pages accessed by the MOD1 and MOD2 links:</p>
+<img alt="_images/Deducktion_ModMatrix.png" class="align-center" src="_images/Deducktion_ModMatrix.png" />
+<p>The matrix presents 24 ‘slots’ in which modulations can be defined. A modulation consists of a source, a target and a modulation amount. Each slot contains a source selection menu on the left, a target selection menu on the right and a central parameter display for controlling the modulation amount.</p>
+<p>A modulation source provides a value to be applied to a modulation target. Examples include envelopes, LFOs and note velocity. Modulation sources can produce modulation values from -100 to + 100 though in most cases they are limited to a subset of this covering a total range of no more than 100. For example LFOs provide output from -50 to +50, and envelopes from 0 to +100.</p>
+<p>Modulation sources are either bipolar, where the values generated vary from positive to negative about 0, or unipolar where the value changes between 0 and a positive of negative limit. LFOs are by default bipolar but can be made unipolar using an offset of +/- 100. Envelopes are an example of a unipolar source.</p>
+<p>Modulation targets represent synthesizer parameters to be controlled by modulation sources. They receive modulation inputs in the range -100 to +100 though in most cases the practical range will be less than this. For example volume targets do not recognize negative values and accept input from 0 to +100 only.</p>
+<p>For each of the available modulation slots the output of each assigned source is sent to the assigned target. The actual modulation value applied to the target is determined by the modulation amount.</p>
+<p>The modulation amount is a multiplier between -100 and +100 and represents the percentage of the modulation source applied to the target. By default the amount is 0 so no modulation is applied. Setting an amount of +100 causes all of the source value to be applied to the target. Similarly -100 applies all of the source to the target but with the opposite polarity. This is relevant for envelopes and LFOs where the output can be inverted.</p>
+<p>Modulation targets may be modulated by multiple sources; the actual value applied to the target will be the sum of all the sources (limited to a maximum of +100 and a minimum of -100.)</p>
+<p>The modulation applied to the target will be in addition to the value already assigned to the parameter via the control panel.</p>
+<section id="modulation-sources">
+<h2>Modulation Sources<a class="headerlink" href="#modulation-sources" title="Permalink to this headline">¶</a></h2>
+<p>The following modulation sources are available:</p>
+<blockquote>
+<div><p><strong>LFO</strong> - the output of the LFOs. By default this is in the range -50 to +50. This allows the LFO output to be applied symmetrical to a source such as pitch. Use the LFO offset value to shift the range up or down to address unipolar targets such as volume which range form 0 to +100.</p>
+<p><strong>Envelope</strong> - the output of the ADSR envelopes in the range 0 to +100.</p>
+<p><strong>Velocity</strong> - the velocity provided by the current note in the range 0 to +100.</p>
+<p><strong>Mod CC</strong> - the value provided from a controller via the MIDI CC value assigned to the corresponding Mod CC setting accessible via the Play page.</p>
+<p><strong>Constant</strong> - a constant value of +100. This allows any fixed modulation value to be applied to a target using the modulation amount control and the value applied will be the same as the amount. Applying a fixed negative amount to a target can shift the output a unipolar modulator, for example an envelope, into negative values turning it into a bipolar modulator.</p>
+<p><strong>Random</strong> - a random number generated for each new note in the range 0 to +100.</p>
+<p><strong>Pitch Bend</strong> - the current potion of the pitch bend controller in the range -100 to +100. Note pitch bend is always applied to the pitch of notes played according to the setting in the control section. If the pitch bend modulation source is applied to note pitch it is in addition to that applied directly from the MIDI controller.</p>
+<p><strong>Mod Wheel</strong> - the current position of the mod wheel in the range 0 to +100.</p>
+<p><strong>Channel Pressure</strong> - the ‘aftertouch’ pressure value in the range 0 to +100. Thsi affects all the notes currently being played.</p>
+<p><strong>Key Pressure</strong> - the ‘aftertouch’ pressure value in the range 0 to +100. This affects only the notes where aftertouch is being applied.</p>
+</div></blockquote>
+</section>
+<section id="modulation-targets">
+<h2>Modulation Targets<a class="headerlink" href="#modulation-targets" title="Permalink to this headline">¶</a></h2>
+<p>The following modulation targets are available:</p>
+<blockquote>
+<div><p><strong>Osc Tune</strong> - the oscillator pitch in semitones. For each unit change in the source value the pitch will change by a semitone. The pitch can be changed continuously over its modulation range.</p>
+<p><strong>Osc Semi</strong> - the oscillator pitch in semitones. This is the same as Osc Tune except it can be changed only in semitone intervals.</p>
+<p><strong>Osc Fine</strong> - the oscillator pitch in cents. For each unit change in the source value the pitch will change by a cent.</p>
+<p><strong>Osc PW</strong> - the pulse width setting.</p>
+<p><strong>Osc Sub</strong> - the sub oscillator level. Note this is a bipolar control so positive and negative modulation amounts will play either of the two waveforms available via the sub oscillator.</p>
+<p><strong>Osc Pan</strong> - the oscillator pan position.</p>
+<p><strong>Osc Vol</strong> - the oscillator volume.</p>
+<p><strong>Osc X Vol</strong> - the oscillator cross-fade amount (see below).</p>
+<p><strong>Filter Cut</strong> - the filter cutoff frequency.</p>
+<p><strong>Filter Res</strong> - the filter resonance level.</p>
+<p><strong>LFO Rate</strong> - the LFO rate.</p>
+<p><strong>Mod Amount</strong> - the modulation amount for each of the 24 modulation slots.</p>
+</div></blockquote>
+<p>The Mod Amount target allows the modulation amount of a given slot to be controlled by a second modulation source in another slot. For example, if slot 1 contains an LFO to filter cutoff assignment, a second slot can be used to assign the mod wheel to mod amount 1. In this way the mod wheel can control the amount of modulation applied to the filter. In this case set the LFO modulation amount to +100 and use the mod amount in slot 2 to control the maximum modulation level.</p>
+<p>The Osc X Vol modulation target allows a modulation source to cross-fade the volumes of both oscillators. To see how it works try the following demonstration:</p>
+<ol class="arabic simple">
+<li><p>initialise the current preset.</p></li>
+<li><p>set the oscillators to square and noise outputs and both volumes to 0.</p></li>
+<li><p>set LFO 1 to a sine or triangle waveform, +100 offset and 75.0 phase.</p></li>
+<li><p>in the mod matrix assign LFO 1 to Osc X Vol and set the modulation level to +100.</p></li>
+</ol>
+<p>Play a note. The volume should cross fade between the two oscillators. Use the modulation level to determine the oscillator volume.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reducktion.html">Reducktion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="deducktion.html">Deducktion</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="deducktion.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="deducktion_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deducktion_topbar.html">The Top Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deducktion_centralpanel.html">The Central Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deducktion_lowerpanel.html">The Lower Panel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The Modulation Matrix</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="free_effects.html">Free Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects.html" title="Free Effects"
+             >next</a></li>
+        <li class="right" >
+          <a href="deducktion_lowerpanel.html" title="The Lower Panel"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="deducktion.html" >Deducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Modulation Matrix</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

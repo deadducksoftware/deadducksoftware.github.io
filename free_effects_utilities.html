@@ -1,0 +1,161 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Utilities &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Classic Instruments" href="classic_instruments.html" />
+    <link rel="prev" title="Distortion" href="free_effects_distortion.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="classic_instruments.html" title="Classic Instruments"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="free_effects_distortion.html" title="Distortion"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" accesskey="U">Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Utilities</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="utilities">
+<h1>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h1>
+<section id="siggen">
+<h2>SigGen<a class="headerlink" href="#siggen" title="Permalink to this headline">¶</a></h2>
+<p>A signal-generator with sine, pink noise and white noise outputs.</p>
+<img alt="_images/FreeEffects_SigGen.png" class="align-center" src="_images/FreeEffects_SigGen.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Output selector</strong> - set the output signal to sine, pink noise or white noise.</p>
+<p><strong>Freq</strong> - set the frequency of the sine output from 20 Hz to 20 kHz.</p>
+<p><strong>Level</strong> - set the signal output level from -inf to 0 dB.</p>
+</div></blockquote>
+</section>
+<section id="utility">
+<h2>Utility<a class="headerlink" href="#utility" title="Permalink to this headline">¶</a></h2>
+<p>A multi-function mixing utility.</p>
+<img alt="_images/FreeEffects_Utility.png" class="align-center" src="_images/FreeEffects_Utility.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Phase Selector</strong> - invert the phase (polarity) of the left and right channels.</p>
+<p><strong>Input Selector</strong> - select the input mode (see below).</p>
+<p><strong>Trim</strong> - adjust the input level from -20 dB to +20 dB.</p>
+<p><strong>Pan</strong> - set the pan position from 100L to 100R.</p>
+<p><strong>Level</strong> - set the output level from -inf to 0 dB.</p>
+<p><strong>Pan Selector</strong> - set the pan mode (see below).</p>
+<p><strong>Output Selector</strong> - set the output mode (see below).</p>
+</div></blockquote>
+<p>The signal processing order is as follows:</p>
+<ol class="arabic simple">
+<li><p>Phase</p></li>
+<li><p>Input</p></li>
+<li><p>Trim</p></li>
+<li><p>Pan</p></li>
+<li><p>Level</p></li>
+<li><p>Output</p></li>
+</ol>
+<p>The input options are:</p>
+<ul class="simple">
+<li><p>Unchanged.</p></li>
+<li><p>Swapped left/right.</p></li>
+<li><p>The left channel passed to both left/right output channels (right channel ignored).</p></li>
+<li><p>The right channel passed to both left right output channels (left channel ignored).</p></li>
+<li><p>Both channels summed to a mono mix and passed to both output channels.</p></li>
+<li><p>L/R channels converted to mid/side (or mid/side back to L/R).</p></li>
+</ul>
+<p>The pan options are:</p>
+<ul class="simple">
+<li><p>Inactive (pan control is bypassed).</p></li>
+<li><p>Constant Power pan-law (-3 dB cut when centre-panned).</p></li>
+<li><p>SSL-style pan-law (-4.5 dB cut when centre-panned).</p></li>
+<li><p>Linear pan-law (-6 dB cut when centre-panned).</p></li>
+</ul>
+<p>The output options are:</p>
+<ul class="simple">
+<li><p>Use Mid/Side to change a stereo signal to mid/side or an already converted mid/side signal back to stereo.</p></li>
+<li><p>Use Hard Clip to prevent excessive output levels by restricting the signal to 0 dB.</p></li>
+</ul>
+<p>The stereo input and output levels are shown by two sets of level meters with input on the left and output on the right.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reducktion.html">Reducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="free_effects.html">Free Effects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="free_effects.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="free_effects_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_filters.html">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_equalisers.html">Equalisers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_strips.html">Channel Strips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_delays.html">Delay and Reverb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_modulation.html">Modulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_distortion.html">Distortion</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Utilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="classic_instruments.html" title="Classic Instruments"
+             >next</a></li>
+        <li class="right" >
+          <a href="free_effects_distortion.html" title="Distortion"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" >Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Utilities</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

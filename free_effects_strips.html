@@ -1,0 +1,156 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Channel Strips &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Delay and Reverb" href="free_effects_delays.html" />
+    <link rel="prev" title="Dynamics" href="free_effects_dynamics.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_delays.html" title="Delay and Reverb"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="free_effects_dynamics.html" title="Dynamics"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" accesskey="U">Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Channel Strips</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="channel-strips">
+<h1>Channel Strips<a class="headerlink" href="#channel-strips" title="Permalink to this headline">¶</a></h1>
+<section id="channel">
+<h2>Channel<a class="headerlink" href="#channel" title="Permalink to this headline">¶</a></h2>
+<p>A multi-function channel-strip plugin featuring gate, compressor, equaliser, limiter, filters and gain controls with comprehensive input, output and gain-reduction metering.</p>
+<img alt="_images/FreeEffects_Channel.png" class="align-center" src="_images/FreeEffects_Channel.png" />
+<p>The Gate, Comp, EQ and Limiter modules are taken directly from the corresponding stand-alone plugins and function the same way. See the appropriate sections in this user guide for more information.</p>
+<p>The remaining controls behave as follows:</p>
+<blockquote>
+<div><p><strong>HPF</strong> - set the highpass filter cutoff frequency from 10 Hz to 1500 Hz.</p>
+<p><strong>LPF</strong> - set the lowpass filter cutoff frequency from 1500 Hz to 15 kHz.</p>
+<p><strong>Input/Output</strong> - set the input and output gain levels from -20 dB to +20 dB.</p>
+</div></blockquote>
+<p>The signal flow is as follows:</p>
+<ol class="arabic simple">
+<li><p>Input gain</p></li>
+<li><p>Input metering</p></li>
+<li><p>Highpass filter</p></li>
+<li><p>Lowpass filter</p></li>
+<li><p>Gate/Compressor/EQ</p></li>
+<li><p>Output gain</p></li>
+<li><p>Limiter</p></li>
+<li><p>Clipper</p></li>
+<li><p>Output metering</p></li>
+</ol>
+<p>The order in which the signal is passed through the Gate/Compressor/EQ chain is determined by the selector in the lower left corner:</p>
+<blockquote>
+<div><p><strong>G-C-E</strong> - Gate/Comp/EQ.</p>
+<p><strong>G-E-C</strong> - Gate/EQ/Comp.</p>
+<p><strong>E-G-C</strong> - EQ/Gate/Comp.</p>
+</div></blockquote>
+<p>The Channel meter includes displays for stereo input, gain reduction, limiting and stereo output:</p>
+<img alt="_images/FreeEffects_ChannelMetering.png" class="align-center" src="_images/FreeEffects_ChannelMetering.png" />
+</section>
+<section id="channel2">
+<h2>Channel2<a class="headerlink" href="#channel2" title="Permalink to this headline">¶</a></h2>
+<p>A zero-latency version of the Channel plugin minus the limiter.</p>
+<img alt="_images/FreeEffects_Channel2.png" class="align-center" src="_images/FreeEffects_Channel2.png" />
+<p>The Limiter module included in the Channel plugin uses a look-ahead buffer to manage the incoming signal and thus introduces a fixed latency of 1.5 ms into the plugin’s signal flow. This latency remains even when the limiter is bypassed. To cater for latency-free processing, a second channel-strip plugin ‘Channel2’ is available.</p>
+<p>Channel2 omits the limiter module and its associated latency replacing it with a utility section taken from the plugin of the same name.</p>
+<p>The signal flow for Channel2 is as follows:</p>
+<ol class="arabic simple">
+<li><p>Input gain</p></li>
+<li><p>Input metering</p></li>
+<li><p>L/R phase invert</p></li>
+<li><p>Input switching</p></li>
+<li><p>Highpass filter</p></li>
+<li><p>Lowpass filter</p></li>
+<li><p>Gate/Compressor/EQ</p></li>
+<li><p>Output gain</p></li>
+<li><p>Output metering</p></li>
+</ol>
+<p>See the Channel and Utility sections in this guide for more information.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reducktion.html">Reducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="free_effects.html">Free Effects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="free_effects.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="free_effects_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_filters.html">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_equalisers.html">Equalisers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_dynamics.html">Dynamics</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Channel Strips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_delays.html">Delay and Reverb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_modulation.html">Modulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_distortion.html">Distortion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_utilities.html">Utilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_delays.html" title="Delay and Reverb"
+             >next</a></li>
+        <li class="right" >
+          <a href="free_effects_dynamics.html" title="Dynamics"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" >Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Channel Strips</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

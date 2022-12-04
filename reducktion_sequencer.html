@@ -1,0 +1,132 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The Sequencer &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Themes" href="reducktion_themes.html" />
+    <link rel="prev" title="The Modulation Matrix" href="reducktion_modmatrix.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reducktion_themes.html" title="Themes"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="reducktion_modmatrix.html" title="The Modulation Matrix"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" accesskey="U">Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Sequencer</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-sequencer">
+<h1>The Sequencer<a class="headerlink" href="#the-sequencer" title="Permalink to this headline">¶</a></h1>
+<p>The sequencer is located in the lower panel page accessed by the SEQ link:</p>
+<img alt="_images/Reducktion_Sequencer.png" class="align-center" src="_images/Reducktion_Sequencer.png" />
+<p>The sequencer is activated by clicking the Run button. Once it is running any keys pressed will be played individually according to the settings in the controls on the left of the panel.</p>
+<p>The actual notes played are determined by the sequencer grid. This takes each key being pressed and translates it into a new note according to the settings in the appropriate step of the grid. These settings are:</p>
+<blockquote>
+<div><p><strong>Note</strong> - an offset in semitones to be applied to the key to create the actual note played.</p>
+<p><strong>Vel</strong> - the velocity applied to the note played.</p>
+<p><strong>Len</strong> - the length of the note as a percentage of the step length.</p>
+<p><strong>Mod A/B</strong> - two independent modulation values to be applied through the modulation matrix for the duration of the step.</p>
+</div></blockquote>
+<p>The Mod A &amp; B values provide modulation sources for use via the modulation matrix. By default the values of Mod A &amp; B remain fixed for the duration of each step with each value jumping to the next as each step is selected. If required the values can be ‘smoothed’ to create continuous modulation values by enabling the corresponding options in the context menu. When smoothed the outputs of Mod A &amp; B will start each step at their assigned value but change gradually over the step to match the starting value of the next step.</p>
+<p>The main playback controls are:</p>
+<blockquote>
+<div><p><strong>Mode</strong> - the order in which multiple notes are played.</p>
+<p><strong>Time</strong> - the duration of each step in the sequence in host tempo-based divisions.</p>
+<p><strong>Steps</strong> - the number of active steps in the sequence; steps beyond this limit are ignored.</p>
+<p><strong>Mod A/B</strong> - set the modulators to stepped or smoothed modulation.</p>
+</div></blockquote>
+<p>Generally speaking the sequencer plays any combination of keys in the style of a traditional keyboard arpeggiator. Whenever keys are pressed the sequencer will play each one in turn in the order indicated by the mode. A single key will simply be repeated while two keys will be played repeatedly one after the other. In either case the mode setting makes no difference but becomes important once three or more keys are played. Here the keys will be played in ascending note order (up), descending note order (down) or both (up/down).</p>
+<p>Whatever mode is in effect each note will be played against a step in the sequencer. As each note is selected the sequencer step is advanced by one and the corresponding settings applied to the note. Once the final step has been played it will return to step 1 and continue.</p>
+<p>Note: the playback mode affects the order in which the keys being pressed are played. It has no effect on the sequencer playback which always plays left-to right.</p>
+<p>Setting the velocity of a step to zero will create an empty step. No new note will be played and the currently selected note will remain selected for playback on the next non-empty step. This prevents played notes from being skipped when they are matched against an empty step in the sequencer. The Mod A and Mod B values are always applied even when there is no new note.</p>
+<p>When playing in mono mode glide will be enabled for every step when glide mode is set to ‘All’. If glide mode is set to ‘Legato’ a step length of 100 can be used to simulate overlapping notes. The step set to 100 will be treated as though it overlaps the step following and glide will occur between the corresponding notes.</p>
+<p>This simulated legato playback also applies to the retrigger behaviour defined by the Mono-Mode setting. When set to ‘Legato’ retriggering will not occur following a step where the length is set to 100.</p>
+<p>Right-clicking the sequencer section title bar will reveal the context menu. This contains the following options:</p>
+<blockquote>
+<div><p><strong>Save Sequence</strong> - save the current sequence to a text file.</p>
+<p><strong>Load Sequence</strong> - load a saved sequence from a text file.</p>
+<p><strong>Init Sequence</strong> - reset the sequence to its default values.</p>
+</div></blockquote>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="reducktion.html">Reducktion</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="reducktion.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="reducktion_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_topbar.html">The Top Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_centralpanel.html">The Central Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_lowerpanel.html">The Lower Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_modmatrix.html">The Modulation Matrix</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The Sequencer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_themes.html">Themes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="free_effects.html">Free Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reducktion_themes.html" title="Themes"
+             >next</a></li>
+        <li class="right" >
+          <a href="reducktion_modmatrix.html" title="The Modulation Matrix"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" >Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Sequencer</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

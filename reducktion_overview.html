@@ -1,0 +1,159 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Overview &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Top Bar" href="reducktion_topbar.html" />
+    <link rel="prev" title="Reducktion" href="reducktion.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reducktion_topbar.html" title="The Top Bar"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="reducktion.html" title="Reducktion"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" accesskey="U">Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Overview</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>Reducktion is a 32-voice polyphonic software synthesizer for use in audio hosts that support the VST 2.4 plugin format. It available for Windows operating systems in both 32-bit and 64-bit versions.</p>
+<img alt="_images/Reducktion.png" class="align-center" src="_images/Reducktion.png" />
+<p>This guide provides an overview of the functions and operation of the synthesizer.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Reducktion is provided in a simple zip-file package containing the following:</p>
+<blockquote>
+<div><p><strong>Reducktion.dll</strong> - the 64-bit version of the plugin</p>
+<p><strong>Reducktion_32.dll</strong> -  the 32-bit version of the plugin</p>
+<p><strong>Reducktion_Data</strong> -  a directory containing example presets and themes</p>
+</div></blockquote>
+<p>To install simply copy the appropriate .dll file to a plugin directory recognised by your host.</p>
+<p>Reducktion requires a ‘home’ folder to store various resources such as settings, presets and themes. By default this will be created automatically when the plugin is loaded for the first time. This will create the required folders in the following directory:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;username&gt;\AppData\Local\Dead</span> <span class="pre">Duck</span> <span class="pre">Software\Reducktion</span></code></p>
+</div></blockquote>
+<p>This allows resources to be shared by all instances of the plugin regardless of where they are installed on your computer. Note that Reducktion requires write-access permissions to these folders to save presets and settings so a shared home folder will be necessary if your plugins are located in restricted directories such as ‘Program Files’.</p>
+<p>If you would prefer to keep the plugin resources and settings with the plugin itself it is possible to use a local home folder which is specific to a single instance of the plugin. This requires a folder named ‘Reducktion_Data’ in the same directory as the plugin. On startup Reducktion will look for this folder and if found will use it as the home location. As before make sure Reducktion has write-access to this folder to allow the saving of settings and presets.</p>
+<p>Once the home folder has been created copy the content files into the Presets and Themes folders as appropriate.</p>
+<p>For a quick and easy installation simply extract the contents of the zip package to a plugin folder that is write-accessible by your host.</p>
+</section>
+<section id="user-interface">
+<h2>User Interface<a class="headerlink" href="#user-interface" title="Permalink to this headline">¶</a></h2>
+<p>The Reducktion user interface consists of three sections: a top bar, a central panel and a multi-page lower panel.</p>
+<img alt="_images/Reducktion_UserInterface.png" class="align-center" src="_images/Reducktion_UserInterface.png" />
+<p>The lower panel is a paged display; switch between the pages using the links on the left side of the panel. The currently selected page us underlined in the list.</p>
+<p>The pages are:</p>
+<blockquote>
+<div><p><strong>MAIN</strong> - the main section presenting general synthesiser options and effects.</p>
+<p><strong>MOD</strong> - the modulation matrix.</p>
+<p><strong>SEQ</strong> - the sequencer.</p>
+</div></blockquote>
+<p>These will be described in greater detail later in this guide.</p>
+</section>
+<section id="controls">
+<h2>Controls<a class="headerlink" href="#controls" title="Permalink to this headline">¶</a></h2>
+<p>Each of the user interface sections make use of various styles of control:</p>
+<blockquote>
+<div><p><strong>Menus</strong> - present multiple options of which one must be selected. Click the menu control to reveal the options and make a selection. Ctrl-click to restore its default value.</p>
+</div></blockquote>
+<img alt="_images/Reducktion_CtrlMenu.png" class="align-center" src="_images/Reducktion_CtrlMenu.png" />
+<blockquote>
+<div><p><strong>Switches</strong> - provide a choice between two options usually on or off.</p>
+</div></blockquote>
+<img alt="_images/Reducktion_CtrlSwitch.png" class="align-center" src="_images/Reducktion_CtrlSwitch.png" />
+<blockquote>
+<div><p>Note: switches and menus use ‘- -’ to indicate ‘off’ or that no selection has been made.</p>
+<p><strong>Parameter knobs</strong> - control parameter values by mouse-dragging. This may occur in any direction: up/down, left/right or anywhere in between. Press shift while dragging to provide more accurate control. Ctrl-click or double-click to restore the default value.</p>
+</div></blockquote>
+<img alt="_images/Reducktion_CtrlKnob.png" class="align-center" src="_images/Reducktion_CtrlKnob.png" />
+<blockquote>
+<div><p>While the value of the parameter is indicated at any time by the angular position of the knob, a more accurate readout will be displayed when the value is being changed. To view this without affecting the position of the knob right-click on the control.</p>
+<p><strong>Parameter displays</strong> - these function exactly the same as parameter knobs but occupy a smaller area and provide a permanent display value.</p>
+</div></blockquote>
+<img alt="_images/Reducktion_CtrlDisplay.png" class="align-center" src="_images/Reducktion_CtrlDisplay.png" />
+<p>Many of the user interface sections feature context menus that provide additional functions. To access these click the title-bar of the relevant section. In most cases the menus provide access to clipboard operations allowing the section settings to be copied and a reset option to restore the section to its default values.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="reducktion.html">Reducktion</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="reducktion.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_topbar.html">The Top Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_centralpanel.html">The Central Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_lowerpanel.html">The Lower Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_modmatrix.html">The Modulation Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_sequencer.html">The Sequencer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_themes.html">Themes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="free_effects.html">Free Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reducktion_topbar.html" title="The Top Bar"
+             >next</a></li>
+        <li class="right" >
+          <a href="reducktion.html" title="Reducktion"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" >Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Overview</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

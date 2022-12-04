@@ -1,0 +1,210 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Themes &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Deducktion" href="deducktion.html" />
+    <link rel="prev" title="The Sequencer" href="reducktion_sequencer.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="deducktion.html" title="Deducktion"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="reducktion_sequencer.html" title="The Sequencer"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" accesskey="U">Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Themes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="themes">
+<h1>Themes<a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h1>
+<p>Reducktion features a simple theming system that allows the user interface design to be customised by the end user.</p>
+<p>Themes are located in the Themes sub-directory of the Reducktion home folder. To start a new theme create a new directory in this location and name it after your theme.</p>
+<p>A theme consists of the following resources:</p>
+<blockquote>
+<div><p><strong>Background.png</strong> - a graphical image used to define the plugin background.</p>
+<p><strong>Knob.png</strong> - a film-strip image used to define the control knobs.</p>
+<p><strong>Theme.txt</strong> - the theme definition file containing colours and other parameters.</p>
+</div></blockquote>
+<p>The background image must be a png file at least 2112 by 1248 pixels in size. This represents the default size of the 200% scale and will be automatically resized when different sizes are selected. If you opt to add additional margins to the background (see later) the actual size will be larger.</p>
+<p>A single background image provides backgrounds for all the pages of the lower panel. For more detailed theming two additional images can be added:</p>
+<blockquote>
+<div><p><strong>Background2.png</strong></p>
+<p><strong>Background3.png</strong></p>
+</div></blockquote>
+<p>These provide backgrounds for the Mod and Seq pages and should be 1984 by 288 pixels in size. By default these are transparent and are only required where different background graphics are required for each of the Lower Panel tabs. In such cases the main background image should be used to provide the background for the Main tab page.</p>
+<p>The knob graphic is a vertical film-strip image file containing 101 frames each 96 by 96 pixels in size. This is used to create the animated parameter knobs. As with the background these dimension represent the 200% level scaling and will be resized as required.</p>
+<p>Note: the free KnobMan tool can be used to create these images.</p>
+<p>The theme definition file is a plain text file that defines the colours to be used for the various interface elements and sizes for the top, bottom and side margins. In addition a limited amount of customisation is available for fonts.</p>
+<p>An example theme definition looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">backgroundColor</span><span class="o">=</span><span class="mh">0xa0</span> <span class="mh">0xa0</span> <span class="mh">0xa0</span> <span class="mh">0xff</span>
+<span class="n">headerColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x64</span> <span class="mh">0x6a</span> <span class="mh">0x88</span>
+<span class="n">divider1Color</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x64</span> <span class="mh">0x6a</span> <span class="mh">0x88</span>
+<span class="n">divider2Color</span><span class="o">=</span><span class="mh">0x80</span> <span class="mh">0x80</span> <span class="mh">0x80</span> <span class="mh">0x88</span>
+<span class="n">voiceOnColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0xff</span> <span class="mh">0x00</span> <span class="mh">0xff</span>
+<span class="n">voiceOffColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0xff</span>
+<span class="n">presetButtonColor</span><span class="o">=</span><span class="mh">0xff</span> <span class="mh">0xff</span> <span class="mh">0xff</span> <span class="mh">0xff</span>
+<span class="n">logoFontColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0xff</span>
+<span class="n">titleFontColor</span><span class="o">=</span><span class="mh">0xe0</span> <span class="mh">0xe0</span> <span class="mh">0xe0</span> <span class="mh">0xff</span>
+<span class="n">menuFontColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0xff</span>
+<span class="n">menuBackColor</span><span class="o">=</span><span class="mh">0x80</span> <span class="mh">0x80</span> <span class="mh">0x80</span> <span class="mh">0xff</span>
+<span class="n">displayFontColor</span><span class="o">=</span><span class="mh">0x05</span> <span class="mh">0xbe</span> <span class="mh">0xee</span> <span class="mh">0xff</span>
+<span class="n">displayBackColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0x22</span> <span class="mh">0xff</span>
+<span class="n">labelFontColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0xff</span>
+<span class="n">onTabFontColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0xff</span>
+<span class="n">offTabFontColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0xff</span>
+<span class="n">seqLabel1FontColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0xff</span>
+<span class="n">seqLabel1BackColor</span><span class="o">=</span><span class="mh">0xa0</span> <span class="mh">0xa0</span> <span class="mh">0xa0</span> <span class="mh">0xff</span>
+<span class="n">seqLabel2FontColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0xff</span>
+<span class="n">seqLabel2BackColor</span><span class="o">=</span><span class="mh">0x80</span> <span class="mh">0x80</span> <span class="mh">0x80</span> <span class="mh">0xff</span>
+<span class="n">seqLabel3FontColor</span><span class="o">=</span><span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0x00</span> <span class="mh">0xff</span>
+<span class="n">seqLabel3BackColor</span><span class="o">=</span><span class="mh">0xc0</span> <span class="mh">0xc0</span> <span class="mh">0xc0</span> <span class="mh">0xff</span>
+<span class="n">logoFontBold</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">titleFontBold</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">displayFontBold</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">labelFontBold</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">onTabFontBold</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">offTabFontBold</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">seqLabel1FontBold</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">seqLabel2FontBold</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">seqLabel3FontBold</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">topMargin</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">bottomMargin</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">sideMargin</span><span class="o">=</span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>On each line a keyword is followed immediately by a value definition. In most cases these are colours which are defined by four values: red, green, blue and alpha.</p>
+<p>Use alpha to determine the transparency of the element. Use 0x00 for invisible and 0xff for fully visible.</p>
+<p>There must be no spaces before the keyword, or before or after the ‘=’. Blank lines and lines starting with ‘#’ are ignored.</p>
+<p>Colours are defined using hexadecimal (0x00 to 0xff) or decimal (0 to 255) values.</p>
+<p>The colour keywords are interpreted as follows.</p>
+<blockquote>
+<div><p><strong>backgroundColor</strong> - the colour of the entire plugin background. This will completely hide the background image if its alpha value is set to 0xff. Alternatively use a semi-transparent colour to modify the colours of the background image.</p>
+<p><strong>headerColor</strong> - the background colour of the section title bars.</p>
+<p><strong>divider1Color</strong> - the colour of the main section dividers.</p>
+<p><strong>divider2Color</strong> - the colour of the section sub-dividers.</p>
+<p><strong>voiceOnColor</strong> - the colour of the active voice indicators.</p>
+<p><strong>voiceOffColor</strong> - the colour of the inactive voice indicators.</p>
+<p><strong>presetButtonColor</strong> - the colour of the preset bowser arrow buttons when clicked.</p>
+<p><strong>logoFontColor</strong> - the colour of the Reduction title text.</p>
+<p><strong>titleFontColor</strong> - the colour of the section header titles.</p>
+<p><strong>menuFontColor</strong> - the text colour for parameter menus. Defaults to displayFontColor if not defined.</p>
+<p><strong>menuBackColor</strong> - the background colour for parameter menus. Defaults to displayBackColor if not defined.</p>
+<p><strong>displayFontColor</strong> - the text colour for switches and parameter display values.</p>
+<p><strong>displayBackColor</strong> - the background colour for switches and parameter displays</p>
+<p><strong>labelFontColor</strong> - the colour of the control knob text values and other labels.</p>
+<p><strong>onTabFontColor</strong> - the colour of the active lower panel selection link.</p>
+<p><strong>offTabFontColor</strong> - the colour of the inactive lower panel selection link.</p>
+<p><strong>seqLabel1FontColor</strong> - the text colour for inactive steps in the sequencer grid.</p>
+<p><strong>seqLabel1BackColor</strong> - the background colour for inactive steps in the sequencer grid.</p>
+<p><strong>seqLabel2FontColor</strong> - the text colour for active steps in the sequencer grid.</p>
+<p><strong>seqLabel2BackColor</strong> - the background colour for active steps in the sequencer grid.</p>
+<p><strong>seqLabel3FontColor</strong> - the text colour of the currently playing step in the sequencer grid.</p>
+<p><strong>seqLabel3BackColor</strong> - the text colour of the currently playing step in the sequencer grid.</p>
+</div></blockquote>
+<p>Fonts can be set to either bold (1) or normal (0) using the following keywords:</p>
+<blockquote>
+<div><p><strong>logoFontBold</strong></p>
+<p><strong>titleFontBold</strong></p>
+<p><strong>displayFontBold</strong></p>
+<p><strong>labelFontBold</strong></p>
+<p><strong>onTabFontBold</strong></p>
+<p><strong>offTabFontBold</strong></p>
+<p><strong>seqLabel1FontBold</strong></p>
+<p><strong>seqLabel2FontBold</strong></p>
+<p><strong>seqLabel3FontBold</strong></p>
+</div></blockquote>
+<p>Setting the onTabFont to any value will remove the underscore from the tab label.</p>
+<p>Three more keywords are used to define margins around the edges of the plugin.</p>
+<blockquote>
+<div><p><strong>topMargin</strong> - space to be added to the top of the plugin window.</p>
+<p><strong>bottomMargin</strong> - space to be added to the bottom of the plugin window.</p>
+<p><strong>sideMargin</strong> - space to be added to either side of the plugin window.</p>
+</div></blockquote>
+<p>In each case the margin must be defined in units of 16 pixels. For example a top margin of 1 would add 16 pixels to the top of the plugin window.</p>
+<p>Any margins added to the plugin must be reflected in the size of the background graphic. Add 16 pixels for each margin unit added to each edge of the plugin window.</p>
+<p>All the resources required to present the default theme are built-in to the Reducktion plugin. Defining a new theme requires these internal resources to be overridden, any resources missing from a user-defined theme will be provided by the default theme.</p>
+<p>This allows simple changes to be made without having to develop a complete theme. For example, an alternative knob design can be installed simply by adding a new Knob.png image to the Default folder in the Themes directory.</p>
+<p>The theme definition file does not have to be complete; any missing values will be provided by the plugin. To change a colour in the default theme add a Theme.txt file to the Default theme directory and add new definitions for the colours you want to change.</p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="reducktion.html">Reducktion</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="reducktion.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="reducktion_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_topbar.html">The Top Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_centralpanel.html">The Central Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_lowerpanel.html">The Lower Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_modmatrix.html">The Modulation Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reducktion_sequencer.html">The Sequencer</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Themes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="free_effects.html">Free Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="deducktion.html" title="Deducktion"
+             >next</a></li>
+        <li class="right" >
+          <a href="reducktion_sequencer.html" title="The Sequencer"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reducktion.html" >Reducktion</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Themes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Delay and Reverb &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modulation" href="free_effects_modulation.html" />
+    <link rel="prev" title="Channel Strips" href="free_effects_strips.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_modulation.html" title="Modulation"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="free_effects_strips.html" title="Channel Strips"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" accesskey="U">Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Delay and Reverb</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="delay-and-reverb">
+<h1>Delay and Reverb<a class="headerlink" href="#delay-and-reverb" title="Permalink to this headline">¶</a></h1>
+<section id="delay">
+<h2>Delay<a class="headerlink" href="#delay" title="Permalink to this headline">¶</a></h2>
+<p>A stereo delay featuring independent left and right channels with optional stereo linking and tempo-sync.</p>
+<img alt="_images/FreeEffects_Delay.png" class="align-center" src="_images/FreeEffects_Delay.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Sync</strong> - switch between frequency (off) and tempo-based timing (on).</p>
+<p><strong>Link</strong> - set the right channel to use the same settings as the left channel.</p>
+<p><strong>Time</strong> - set the delay time from 10 ms to 6 sec or 1/32T to 1/1D according to the sync setting.</p>
+<p><strong>Feedback</strong> - set the feedback amount from 0 to 100%.</p>
+<p><strong>Low/High Cut</strong> - set the highpass and lowpass filter cutoff frequencies from 10 Hz to 20 kHz. These are used to filter the delay return signals before they are passed to the output stage.</p>
+<p><strong>Width</strong> - set the stereo separation for the left and right delays from 0 (mono) to 100% (stereo).</p>
+<p><strong>Mix</strong> - set the dry/wet balance of the output from all dry (0) to all wet (100%).</p>
+</div></blockquote>
+</section>
+<section id="monodelay">
+<h2>MonoDelay<a class="headerlink" href="#monodelay" title="Permalink to this headline">¶</a></h2>
+<p>A mono-delay with optional ‘ping-pong’ stereo output and tempo-sync.</p>
+<img alt="_images/FreeEffects_MonoDelay.png" class="align-center" src="_images/FreeEffects_MonoDelay.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Sync</strong> - switch between frequency (off) and tempo-based timing (on).</p>
+<p><strong>Time</strong> - set the delay time from 10 ms to 6 sec or 1/32T to 1/1D according to the sync setting.</p>
+<p><strong>Feedback</strong> - set the feedback amount from 0 to 100%.</p>
+<p><strong>Low/High Cut</strong> - set the highpass and lowpass filter cutoff frequencies from 10 Hz to 20 kHz. These are used to filter the delay return signals before they are passed to the output stage.</p>
+<p><strong>Width</strong> - set the stereo separation for the ‘ping-pong’ output from -100% (L-R) to +100% (R-L).</p>
+<p><strong>Mix</strong> - set the dry/wet balance of the output from all dry (0) to all wet (100%).</p>
+</div></blockquote>
+<p>MonoDelay combines both stereo inputs into a single mono signal which is mixed to appear in the centre of the stereo field when the width control is set to 0. Non-zero width settings will introduce a stereo ‘ping-pong’ effect where each successive repeat will play alternately between the right and left channels, the value of the setting determining how far to the left or right each repeat is played. Negative width settings cause the ping-pong to movement to occur in the opposite direction, i.e left-right-left instead of right-left-right.</p>
+</section>
+<section id="reverb">
+<h2>Reverb<a class="headerlink" href="#reverb" title="Permalink to this headline">¶</a></h2>
+<p>An efficient algorithmic reverb with pre-delay and input filtering.</p>
+<img alt="_images/FreeEffects_Reverb.png" class="align-center" src="_images/FreeEffects_Reverb.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Room Size</strong> - set the size of the simulated reverb space from 0 (small) to 100% (large).</p>
+<p><strong>Damping</strong> - set the amount by which the reverberations are deadened from 0 to 100%.</p>
+<p><strong>Density</strong> - set the amount of reverberations generated from 0 (low) to 100% (high).</p>
+<p><strong>Width</strong> - set the width of the stereo space occupied by the reverberations from 0 (mono) to 100%.</p>
+<p><strong>Mix</strong> - set the dry/wet balance of the output from all dry (0) to all wet (100%).</p>
+<p><strong>Sync</strong> - switch between frequency (off) and tempo-based timing (on) for the predelay time.</p>
+<p><strong>Predelay</strong> - set the delay before the reverb return signals are heard from 0 to 1 sec or 1/32T to 1/4 according to the sync setting.</p>
+<p><strong>Low Cut</strong> - set the highpass filter cutoff frequency from 10 Hz to 2 kHz.</p>
+<p><strong>High Cut</strong> - set the lowpass filter cutoff frequency from 1 kHz to 20 kHz</p>
+</div></blockquote>
+<p>The low and high cut filters are used to process the input signal before it is passed to the reverb effect.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reducktion.html">Reducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="free_effects.html">Free Effects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="free_effects.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="free_effects_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_filters.html">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_equalisers.html">Equalisers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_strips.html">Channel Strips</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Delay and Reverb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_modulation.html">Modulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_distortion.html">Distortion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_utilities.html">Utilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_modulation.html" title="Modulation"
+             >next</a></li>
+        <li class="right" >
+          <a href="free_effects_strips.html" title="Channel Strips"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" >Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Delay and Reverb</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

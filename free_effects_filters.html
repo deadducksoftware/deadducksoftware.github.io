@@ -1,0 +1,164 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Filters &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Equalisers" href="free_effects_equalisers.html" />
+    <link rel="prev" title="Overview" href="free_effects_overview.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_equalisers.html" title="Equalisers"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="free_effects_overview.html" title="Overview"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" accesskey="U">Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Filters</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="filters">
+<h1>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h1>
+<section id="filter">
+<h2>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
+<p>A multi-mode filter with low-pass, high-pass, band-pass and band-stop (notch) responses from 12 to 48 dB/octave.</p>
+<img alt="_images/FreeEffects_Filter.png" class="align-center" src="_images/FreeEffects_Filter.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Cut</strong> - set the cutoff frequency from 10 Hz to 20 kHz.</p>
+<p><strong>Filter Selector</strong> - set the filter type to lowpass, highpass, bandpass or notch.</p>
+<p><strong>Slope Selector</strong> - set the steepness of the frequency response to 12, 24, 36 or 48 dB/octave.</p>
+</div></blockquote>
+<p>The lowpass filter shows the following frequency responses at 1 kHz:</p>
+<img alt="_images/FreeEffects_FilterLP.png" class="align-center" src="_images/FreeEffects_FilterLP.png" />
+<p>The highpass filter shows the following frequency responses at 1 kHz:</p>
+<img alt="_images/FreeEffects_FilterHP.png" class="align-center" src="_images/FreeEffects_FilterHP.png" />
+<p>The bandpass filter shows the following frequency responses at 1 kHz:</p>
+<img alt="_images/FreeEffects_FilterBP.png" class="align-center" src="_images/FreeEffects_FilterBP.png" />
+<p>The notch filter shows the following frequency responses at 1 kHz:</p>
+<img alt="_images/FreeEffects_FilterBS.png" class="align-center" src="_images/FreeEffects_FilterBS.png" />
+<p>In each case the darker line represents 12 dB/octave and the remaining lines 24, 36 and 48 dB/octave respectively.</p>
+</section>
+<section id="autofilter">
+<h2>AutoFilter<a class="headerlink" href="#autofilter" title="Permalink to this headline">¶</a></h2>
+<p>A resonant multi-mode filter with a built-in LFO modulator.</p>
+<img alt="_images/FreeEffects_AutoFilter.png" class="align-center" src="_images/FreeEffects_AutoFilter.png" />
+<p>The AutoFilter is divided into two sections: a filter and a modulator.</p>
+<p>The filter section provides the following controls:</p>
+<blockquote>
+<div><p><strong>Filter Selector</strong> - set the type of the filter to LP24, LP12, HP, BP or BS.</p>
+<p><strong>Cut</strong> - set the cutoff frequency from 20 Hz to 20 kHz.</p>
+<p><strong>Res</strong> - set the resonance level from 0 to 100%.</p>
+</div></blockquote>
+<p>The filter types available are:</p>
+<blockquote>
+<div><p><strong>LP24</strong> - lowpass (24 dB/octave)</p>
+<p><strong>LP12</strong> - lowpass (12 dB/octave)</p>
+<p><strong>HP</strong> - highpass (12 dB/octave)</p>
+<p><strong>BP</strong> - bandpass (12 dB/octave)</p>
+<p><strong>Notch</strong> - bandstop (12 dB/octave)</p>
+</div></blockquote>
+<p>The modulation section provides the following controls:</p>
+<blockquote>
+<div><p><strong>Modulation Selector</strong> - set the modulation type to sine, sawtooth or square waveforms.</p>
+<p><strong>Sync</strong> - switch between frequency and tempo-based timing.</p>
+<p><strong>Rate</strong> - set the modulation rate from 0.01 Hz to 20 Hz or 8/1 to 1/32T according to the sync setting.</p>
+<p><strong>Depth</strong> - set the amount of modulation applied from -100% to +100%. Negative amounts use an inverted waveform affecting the phase and, for the sawtooth wave, the shape of the modulation applied.</p>
+</div></blockquote>
+</section>
+<section id="dualfilter">
+<h2>DualFilter<a class="headerlink" href="#dualfilter" title="Permalink to this headline">¶</a></h2>
+<p>A highpass and lowpass filter combination with full-range cutoff frequencies and resonance.</p>
+<img alt="_images/FreeEffects_DualFilter.png" class="align-center" src="_images/FreeEffects_DualFilter.png" />
+<p>Both the filters provide the same controls:</p>
+<blockquote>
+<div><p><strong>Cut</strong> - set the cutoff frequency from 10 Hz to 20 kHz.</p>
+<p><strong>Res</strong> - set the resonance level from 0 to 100%.</p>
+</div></blockquote>
+<p>With the highpass filter cut at 100 Hz and the lowpass filter at 2 kHz, the following response curves are presented for various resonance settings:</p>
+<img alt="_images/FreeEffects_DualFilterQ.png" class="align-center" src="_images/FreeEffects_DualFilterQ.png" />
+<p>The darker line represents 0% with subsequent lines showing increments of 20% up to the maximum of 100%.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reducktion.html">Reducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="free_effects.html">Free Effects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="free_effects.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="free_effects_overview.html">Overview</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_equalisers.html">Equalisers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_strips.html">Channel Strips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_delays.html">Delay and Reverb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_modulation.html">Modulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_distortion.html">Distortion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_utilities.html">Utilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_equalisers.html" title="Equalisers"
+             >next</a></li>
+        <li class="right" >
+          <a href="free_effects_overview.html" title="Overview"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" >Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Filters</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

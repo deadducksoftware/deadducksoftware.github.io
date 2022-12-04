@@ -1,0 +1,128 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Distortion &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Utilities" href="free_effects_utilities.html" />
+    <link rel="prev" title="Modulation" href="free_effects_modulation.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_utilities.html" title="Utilities"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="free_effects_modulation.html" title="Modulation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" accesskey="U">Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Distortion</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="distortion">
+<h1>Distortion<a class="headerlink" href="#distortion" title="Permalink to this headline">¶</a></h1>
+<section id="bitcrusher">
+<h2>BitCrusher<a class="headerlink" href="#bitcrusher" title="Permalink to this headline">¶</a></h2>
+<p>A bit-crusher effect for lo-fi distortion.</p>
+<img alt="_images/FreeEffects_BitCrusher.png" class="align-center" src="_images/FreeEffects_BitCrusher.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Crush</strong> - set the bit depth of the input from 16 bits down to 1 bit.</p>
+<p><strong>Decimate</strong> - set the apparent sample rate of the input from 44.1 kHz down to 689 Hz. This is independent of the actual sample rate in use.</p>
+</div></blockquote>
+</section>
+<section id="overdrive">
+<h2>Overdrive<a class="headerlink" href="#overdrive" title="Permalink to this headline">¶</a></h2>
+<p>An overdrive distortion effect.</p>
+<img alt="_images/FreeEffects_Overdrive.png" class="align-center" src="_images/FreeEffects_Overdrive.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Drive</strong> - set the overdrive level from 0 to 100%.</p>
+<p><strong>Level</strong> - set the output gain from -inf to 0 dB.</p>
+</div></blockquote>
+<p>Overdrive provides a subtle distortion effect by adding odd harmonics to the input signal. Note that extra harmonics will be added even when the drive level is set to zero; use higher values to boost the distortion.</p>
+<p>Passing a 100 Hz sine wave through the effect produces the following frequency spectrum:</p>
+<img alt="_images/FreeEffects_OverdriveSine100Hz.png" class="align-center" src="_images/FreeEffects_OverdriveSine100Hz.png" />
+<p>Note the additional harmonics at 300 Hz, 500 Hz, and so on.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reducktion.html">Reducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="free_effects.html">Free Effects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="free_effects.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="free_effects_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_filters.html">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_equalisers.html">Equalisers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_strips.html">Channel Strips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_delays.html">Delay and Reverb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_modulation.html">Modulation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Distortion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_utilities.html">Utilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_utilities.html" title="Utilities"
+             >next</a></li>
+        <li class="right" >
+          <a href="free_effects_modulation.html" title="Modulation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" >Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Distortion</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

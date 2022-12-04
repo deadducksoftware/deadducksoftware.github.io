@@ -1,0 +1,168 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Overview &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Filters" href="free_effects_filters.html" />
+    <link rel="prev" title="Free Effects" href="free_effects.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_filters.html" title="Filters"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="free_effects.html" title="Free Effects"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" accesskey="U">Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Overview</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>The Dead Duck Free Effects are supplied as individual Windows .DLL files for 32-bit and 64-bit systems. To install simply copy the required files into a VST2 plugin folder recognised by your DAW.</p>
+</section>
+<section id="controls">
+<h2>Controls<a class="headerlink" href="#controls" title="Permalink to this headline">¶</a></h2>
+<p>All the effects plugins feature a common set of controls for setting parameters.</p>
+<section id="knobs">
+<h3>Knobs<a class="headerlink" href="#knobs" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/FreeEffects_Knobs.png" class="align-center" src="_images/FreeEffects_Knobs.png" />
+<p>Rotary knobs are used to set continuous parameters and are controlled by mouse-dragging. This may occur in any direction: up/down, left/right or anywhere in between. Press shift while dragging to provide more accurate control. Ctrl-click or double-click to restore the default value.</p>
+<p>The actual value of the knob is shown by a pop-up tooltip which will appear whenever the knob is operated. Right-click the knob to view the tooltip without affecting the knob position.</p>
+</section>
+<section id="switches">
+<h3>Switches<a class="headerlink" href="#switches" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/FreeEffects_Switches.png" class="align-center" src="_images/FreeEffects_Switches.png" />
+<p>Switches are used to set parameters with a limited number of possible values. Simple on/off switches are coloured red and can be turned on or off simply by clicking the switch. Selectors consist of three or more related options and are coloured green. These appear as a vertical set of switches only one of which will be activated at any time. Select the required option by clicking the corresponding switch.</p>
+</section>
+</section>
+<section id="bypass">
+<h2>Bypass<a class="headerlink" href="#bypass" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/FreeEffects_Bypass.png" class="align-center" src="_images/FreeEffects_Bypass.png" />
+<p>All Dead Duck effects include a bypass option. This causes the input signal to be passed directly to the plugin output without being changed in any way. Note this does not deactivate the plugin, it just bypasses the effect’s internal processing chain.</p>
+<p>Dead Duck plugins feature a ‘soft’ bypass where the transition between bypassed and active states is implemented as a cross-fade rather than an instant transition. This prevents clicks from being introduced into the signal flow, something that can be very noticeable on effects such as delays and reverbs.</p>
+</section>
+<section id="metering">
+<h2>Metering<a class="headerlink" href="#metering" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/FreeEffects_Metering.png" class="align-center" src="_images/FreeEffects_Metering.png" />
+<p>Several Dead Duck plugins include ‘LED’-style level meters used to monitor input, output and other dynamic levels such as gain reduction. In all such meters input is shown as two vertical green bars on the left and output as two vertical green bars on the right. Both input and output meters include red overload indicators warning of potential or actual overload at or above 0 dB. In addition the compressor, limiter, gate and expander plugins (including the channel strips) include orange-coloured gain reduction meters between the input and output displays.</p>
+<p>By default the meters range from 0 down to -45 dB. This can be extended down to -90 dB by clicking the number columns either side of the meters.</p>
+</section>
+<section id="system-menu">
+<h2>System Menu<a class="headerlink" href="#system-menu" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/FreeEffects_SystemMenu.png" class="align-center" src="_images/FreeEffects_SystemMenu.png" />
+<p>Clicking the Dead Duck logo in any of the plugins will reveal the system menu. Here the following actions may be performed:</p>
+<blockquote>
+<div><p><strong>Save Preset</strong> - save the current settings to a preset file.</p>
+<p><strong>Load Preset</strong> - load a previously saved preset from a file.</p>
+<p><strong>Initialize</strong> - reset the all the parameters to their default values.</p>
+<p><strong>Global Settings</strong> - access global settings (see below).</p>
+<p><strong>About</strong> - show information about the plugin, including version number.</p>
+</div></blockquote>
+<p>By default saving and loading presets will not use any specific file location, they can be stored anywhere on your filesystem. If you want to store them in a centralised location create a folder named ‘Presets’ in the system directory (see below). If present this will be used as the default location whenever you load or save a preset.</p>
+</section>
+<section id="global-settings">
+<h2>Global Settings<a class="headerlink" href="#global-settings" title="Permalink to this headline">¶</a></h2>
+<p>The effects plugins share the following global settings:</p>
+<blockquote>
+<div><p><strong>Enable +3dB Hard Clip</strong> - prevents the plugins from passing any signal that exceeds 3dB even when bypassed.</p>
+<p>Note: plugins that include feedback or resonance parameters contain additional overload protection that operates independently of this setting.</p>
+<p><strong>Enable Slow Meters</strong> - allow meters to be updated at a rate slow enough to be monitored comfortably. In some hosts this can be too slow so disabling this option may be necessary.</p>
+<p><strong>Enable Mouse Wheel Support</strong> - enable this setting if you want mouse-wheel control over plugin knobs and it is not provided by your host.</p>
+<p><strong>Scale to xxx%</strong> - set the size of the plugins by selecting an appropriate scaling factor from normal (100%) to double size (200%). After selecting the scale all instances of the Dead Duck plugins must be closed and reopened for the change to take effect.</p>
+</div></blockquote>
+</section>
+<section id="system-directory">
+<h2>System Directory<a class="headerlink" href="#system-directory" title="Permalink to this headline">¶</a></h2>
+<p>The system menu is backed by a system directory which is used to store settings and (optionally) presets. By default the directory is located here:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;username&gt;\AppData\Local\Dead</span> <span class="pre">Duck</span> <span class="pre">Software\Effects</span></code></p>
+</div></blockquote>
+<p>This is a shared directory and will be used by all instances of the Dead Duck effects plugins.</p>
+<p>For portable setups or installations where global settings are undesirable, a local settings directory can be used to maintain a private setup for a specific set of plugins. Create a folder named ‘DD Data’ in the directory in which the plugin DLL files are stored. This will be used to store any data saved by those plugins.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reducktion.html">Reducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="free_effects.html">Free Effects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="free_effects.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_filters.html">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_equalisers.html">Equalisers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_strips.html">Channel Strips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_delays.html">Delay and Reverb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_modulation.html">Modulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_distortion.html">Distortion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_utilities.html">Utilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_filters.html" title="Filters"
+             >next</a></li>
+        <li class="right" >
+          <a href="free_effects.html" title="Free Effects"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" >Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Overview</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>

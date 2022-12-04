@@ -1,0 +1,172 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Equalisers &#8212; Dead Duck Software</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dynamics" href="free_effects_dynamics.html" />
+    <link rel="prev" title="Filters" href="free_effects_filters.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_dynamics.html" title="Dynamics"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="free_effects_filters.html" title="Filters"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" accesskey="U">Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Equalisers</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="equalisers">
+<h1>Equalisers<a class="headerlink" href="#equalisers" title="Permalink to this headline">¶</a></h1>
+<section id="equaliser">
+<h2>Equaliser<a class="headerlink" href="#equaliser" title="Permalink to this headline">¶</a></h2>
+<p>A four-band parametric equaliser with switchable low- and high-shelf bands.</p>
+<img alt="_images/FreeEffects_Equaliser.png" class="align-center" src="_images/FreeEffects_Equaliser.png" />
+<p>Each band provides the following controls:</p>
+<blockquote>
+<div><p><strong>Freq</strong> - set the centre frequency for the band in Hz.</p>
+<p><strong>Q</strong> - set the band ‘quality’ from 0 to 100%. Lower settings result in wider bands, while raising the value narrows the width of the boost or cut applied.</p>
+<p><strong>Gain</strong> - set the amount of cut or boost applied from -12 dB to +12 dB.</p>
+</div></blockquote>
+<p>The four bands cover the following frequency ranges:</p>
+<blockquote>
+<div><p><strong>HF</strong> - 1500 Hz to 20 kHz</p>
+<p><strong>HMF</strong> - 400 Hz to 8 kHz</p>
+<p><strong>LMF</strong> - 150 Hz to 2 kHz</p>
+<p><strong>LF</strong> - 20 Hz to 600 Hz</p>
+</div></blockquote>
+<p>The Low Cut highpass filter covers a frequency range of 10 Hz to 1500 Hz. Set it to 0 to deactivate the filter and remove it from the processing chain.</p>
+<p>By default each band uses a ‘bell’ or ‘peak’ type equalisation curve. The LF and HF bands can be switched to use a shelf type response instead; use the Shelf switches associated with each band to achieve this.</p>
+<p>The input trim control allows the input signal gain to be boosted or cut by up to 20 dB.</p>
+<p>The following plots show the frequency-response curves for the LF and LMF bands with varying amounts of gain and Q. In all cases the plots show the responses at the default frequencies for the band, with the darkest line in each plot showing the lowest setting for the parameter being varied.</p>
+<p>The LF shelf band features the following response from -12 to +12 dB with no Q applied:</p>
+<img alt="_images/FreeEffects_EQLFGain.png" class="align-center" src="_images/FreeEffects_EQLFGain.png" />
+<p>The LMF shelf band features the following response from -12 to +12 dB with no Q applied:</p>
+<img alt="_images/FreeEffects_EQLMFGain.png" class="align-center" src="_images/FreeEffects_EQLMFGain.png" />
+<p>Note how the boost/cut shape is asymmetric with a broader boost curve and a more focused cut response.</p>
+<p>The LF shelf band features the following response at +12 dB with Q applied in 20% steps from 0 to 100%:</p>
+<img alt="_images/FreeEffects_EQLFMaxGainQ.png" class="align-center" src="_images/FreeEffects_EQLFMaxGainQ.png" />
+<p>and at -12 dB with Q applied in 20% steps from 0 to 100%:</p>
+<img alt="_images/FreeEffects_EQLFMinGainQ.png" class="align-center" src="_images/FreeEffects_EQLFMinGainQ.png" />
+<p>Note how the boost response dips below 0 dB and the cut response rises above it as the Q is increased.</p>
+<p>The LMF band at -12 dB and +12 dB over the same Q range:</p>
+<img alt="_images/FreeEffects_EQLMFGainQ.png" class="align-center" src="_images/FreeEffects_EQLMFGainQ.png" />
+<p>The plots shown here are typical of the shelf and bell curves provided by all the bands. The bands not illustrated show similar responses within their respective frequency ranges, except for the HF shelf response which is a mirror image of the LF shelf curve.</p>
+</section>
+<section id="djeq">
+<h2>DJEQ<a class="headerlink" href="#djeq" title="Permalink to this headline">¶</a></h2>
+<p>A three-band ‘DJ-style’ equaliser.</p>
+<img alt="_images/FreeEffects_DJEQ.png" class="align-center" src="_images/FreeEffects_DJEQ.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Input</strong> - adjust the input level from -20 dB to +20 dB.</p>
+<p><strong>Gain: Low/Mid/High</strong> - set the boost or cut applied to each of the bands from -inf up to 6 dB.</p>
+<p><strong>Low Freq</strong> - set the low/mid band crossover frequency from 50 Hz to 5 kHz.</p>
+<p><strong>High Freq</strong> - set the mid/high band crossover frequency from 200 Hz to 18 kHz.</p>
+<p><strong>Kill: Low/Mid/High</strong> - deactivate or ‘kill’ each of the bands, removing the range of frequencies from the output.</p>
+</div></blockquote>
+<p>The DJEQ provides three bands of equalisation split between the low and high frequency values. Each band can be boosted by up to 6 dB or cut all the way down to -inf, while a kill switch for each band allows it to be silenced instantly.</p>
+<p>Rather than the ‘bell’ or ‘shelf’ curves provided by the Equaliser plugin, the DJEQ provides a ‘flat’ response between the crossover points defined by the two frequency settings.</p>
+<p>The following example curve shows the response with crossover frequencies of 100 Hz and 5 kHz where the bands have been set to +6 dB, -4 dB and +3 dB respectively.</p>
+<img alt="_images/FreeEffects_DJEQCurve.png" class="align-center" src="_images/FreeEffects_DJEQCurve.png" />
+<p>Activating the mid-band kill switch gives this response:</p>
+<img alt="_images/FreeEffects_DJEQMidKill.png" class="align-center" src="_images/FreeEffects_DJEQMidKill.png" />
+</section>
+<section id="tilteq">
+<h2>TiltEQ<a class="headerlink" href="#tilteq" title="Permalink to this headline">¶</a></h2>
+<p>A tilt-equaliser for adjusting high/low frequency balance.</p>
+<img alt="_images/FreeEffects_TiltEQ.png" class="align-center" src="_images/FreeEffects_TiltEQ.png" />
+<p>The following controls are provided:</p>
+<blockquote>
+<div><p><strong>Input</strong> - adjust the input level from -20 dB to +20 dB.</p>
+<p><strong>Freq</strong> - set the centre point of the tilt response from 500 Hz to 2.5 kHz.</p>
+<p><strong>Gain</strong> - set the amount of boost or cut applied to the low band from -12 dB to +12 dB.</p>
+</div></blockquote>
+<p>TiltEQ divides the frequency spectrum into two regions one above the frequency ‘pivot’ point and one below. With the gain set to 0 dB the response is neutral and the signal is passed unchanged. Raising the gain boosts the lower region while lowering the upper creating a ‘tilting’ frequency response. Conversely, lowering the gain causes the pivot to occur in the opposite direction, with the upper region being boosted and the lower region cut.</p>
+<p>With the frequency set to 1 kHz the response from a +3 dB boost and a -3 dB cut is as follows:</p>
+<img alt="_images/FreeEffects_TiltEQCurve.png" class="align-center" src="_images/FreeEffects_TiltEQCurve.png" />
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reducktion.html">Reducktion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deducktion.html">Deducktion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="free_effects.html">Free Effects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="free_effects.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="free_effects_overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_filters.html">Filters</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Equalisers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_strips.html">Channel Strips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_delays.html">Delay and Reverb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_modulation.html">Modulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_distortion.html">Distortion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_effects_utilities.html">Utilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classic_instruments.html">Classic Instruments</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="free_effects_dynamics.html" title="Dynamics"
+             >next</a></li>
+        <li class="right" >
+          <a href="free_effects_filters.html" title="Filters"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Dead Duck Software</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="free_effects.html" >Free Effects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Equalisers</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Steve Walker.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+    </div>
+  </body>
+</html>
